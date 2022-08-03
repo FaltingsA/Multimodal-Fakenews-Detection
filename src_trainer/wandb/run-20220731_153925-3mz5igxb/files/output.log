@@ -1,0 +1,101 @@
+[2022-07-31 15:39:31,923 main.py: loading data
+[2022-07-31 15:39:31,923 tokenization_utils.py: Model name 'hfl/chinese-roberta-wwm-ext' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, TurkuNLP/bert-base-finnish-cased-v1, TurkuNLP/bert-base-finnish-uncased-v1, wietsedv/bert-base-dutch-cased). Assuming 'hfl/chinese-roberta-wwm-ext' is a path, a model identifier, or url to a directory containing tokenizer files.
+[2022-07-31 15:39:33,213 tokenization_utils.py: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/vocab.txt from cache at /home/v-zuangao/.cache/torch/transformers/5593eb652e3fb9a17042385245a61389ce6f0c8a25e167519477d7efbdf2459a.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+[2022-07-31 15:39:33,213 tokenization_utils.py: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/added_tokens.json from cache at /home/v-zuangao/.cache/torch/transformers/23740a16768d945f44a24590dc8f5e572773b1b2868c5e58f7ff4fae2a721c49.3889713104075cfee9e96090bcdd0dc753733b3db9da20d1dd8b2cd1030536a2
+[2022-07-31 15:39:33,213 tokenization_utils.py: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/special_tokens_map.json from cache at /home/v-zuangao/.cache/torch/transformers/6f13f9fe28f96dd7be36b84708332115ef90b3b310918502c13a8f719a225de2.275045728fbf41c11d3dae08b8742c054377e18d92cc7b72b6351152a99b64e4
+[2022-07-31 15:39:33,214 tokenization_utils.py: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/tokenizer_config.json from cache at /home/v-zuangao/.cache/torch/transformers/5bb5761fdb6c8f42bf7705c27c48cffd8b40afa8278fa035bc81bf288f108af9.1ade4e0ac224a06d83f2cb9821a6656b6b59974d6552e8c728f2657e4ba445d9
+Building prefix dict from the default dictionary ...
+[2022-07-31 15:41:45,620 __init__.py: Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+[2022-07-31 15:41:45,620 __init__.py: Loading model from cache /tmp/jieba.cache
+Loading model cost 0.474 seconds.
+[2022-07-31 15:41:46,094 __init__.py: Loading model cost 0.474 seconds.
+Prefix dict has been built successfully.
+[2022-07-31 15:41:46,095 __init__.py: Prefix dict has been built successfully.
+TEXT: 4766, Image: 4766, label: 4766, Mask: 4766
+TEXT: 1331, Image: 1331, label: 1331, Mask: 1331
+[2022-07-31 15:44:35,514 main.py: Train data_length => TEXT: 4766, Image: 4766, label: 4766, Mask: 4766
+[2022-07-31 15:44:35,579 main.py: Test data_length => TEXT: 1331, Image: 1331, label: 1331, Mask: 1331
+[2022-07-31 15:44:35,580 main.py: building model
+[2022-07-31 15:44:36,729 configuration_utils.py: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/config.json from cache at /home/v-zuangao/.cache/torch/transformers/3227a4c62d38cb0f891e7ccb8fc0b7b7dbd873889b3688c2e95834fb6f6109be.573c56a39f56f50b7bc6e9803d92871c74059419e37e87c5b14d49b1546b0703
+[2022-07-31 15:44:36,730 configuration_utils.py: Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "directionality": "bidi",
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+[2022-07-31 15:44:36,842 modeling_utils.py: loading weights file https://cdn.huggingface.co/hfl/chinese-roberta-wwm-ext/pytorch_model.bin from cache at /home/v-zuangao/.cache/torch/transformers/47d2326d47246cef3121d70d592c0391a4ed594b04ce3dea8bd47edd37e20370.6ac27309c356295f0e005c6029fce503ec6a32853911ebf79f8bddd8dd10edad
+[2022-07-31 15:44:38,154 main.py: expType: mulT, train in expCode: mulT_epoch50, batch_size 256, epoch = 50, lr = 0.01
+[2022-07-31 15:44:38,975 main.py: start training model
+[2022-07-31 15:45:16,690 main.py: Epoch [1/50],  epoch_train_loss: 0.8029, epoch_val_loss: 0.8006, Train_Acc: 0.5025,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:45:55,127 main.py: Epoch [2/50],  epoch_train_loss: 0.8097, epoch_val_loss: 0.7927, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:46:32,874 main.py: Epoch [3/50],  epoch_train_loss: 0.8108, epoch_val_loss: 0.7901, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:47:10,735 main.py: Epoch [4/50],  epoch_train_loss: 0.8113, epoch_val_loss: 0.8110, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:47:48,801 main.py: Epoch [5/50],  epoch_train_loss: 0.8117, epoch_val_loss: 0.8084, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:48:26,833 main.py: Epoch [6/50],  epoch_train_loss: 0.8108, epoch_val_loss: 0.8006, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:49:04,932 main.py: Epoch [7/50],  epoch_train_loss: 0.8111, epoch_val_loss: 0.7927, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:49:43,117 main.py: Epoch [8/50],  epoch_train_loss: 0.8108, epoch_val_loss: 0.8058, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:50:21,309 main.py: Epoch [9/50],  epoch_train_loss: 0.8100, epoch_val_loss: 0.8006, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:50:59,606 main.py: Epoch [10/50],  epoch_train_loss: 0.8104, epoch_val_loss: 0.8058, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:51:37,936 main.py: Epoch [11/50],  epoch_train_loss: 0.8113, epoch_val_loss: 0.7927, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:52:16,216 main.py: Epoch [12/50],  epoch_train_loss: 0.8096, epoch_val_loss: 0.8136, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:52:54,507 main.py: Epoch [13/50],  epoch_train_loss: 0.8109, epoch_val_loss: 0.7927, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:53:32,842 main.py: Epoch [14/50],  epoch_train_loss: 0.8092, epoch_val_loss: 0.8006, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:54:11,250 main.py: Epoch [15/50],  epoch_train_loss: 0.8100, epoch_val_loss: 0.7953, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:54:49,544 main.py: Epoch [16/50],  epoch_train_loss: 0.8101, epoch_val_loss: 0.7849, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:55:27,791 main.py: Epoch [17/50],  epoch_train_loss: 0.8096, epoch_val_loss: 0.8084, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+[2022-07-31 15:56:05,976 main.py: Epoch [18/50],  epoch_train_loss: 0.8105, epoch_val_loss: 0.7901, Train_Acc: 0.5029,  Val_Acc: 0.5131, Val_F1: 0.3391, Val_Pre: 0.2566, Val_Rec: 0.5000.
+Traceback (most recent call last):
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/v-zuangao/.vscode-server/extensions/ms-python.python-2022.8.1/pythonFiles/lib/python/debugpy/__main__.py", line 45, in <module>
+    cli.main()
+  File "/home/v-zuangao/.vscode-server/extensions/ms-python.python-2022.8.1/pythonFiles/lib/python/debugpy/../debugpy/server/cli.py", line 444, in main
+    run()
+  File "/home/v-zuangao/.vscode-server/extensions/ms-python.python-2022.8.1/pythonFiles/lib/python/debugpy/../debugpy/server/cli.py", line 285, in run_file
+    runpy.run_path(target_as_str, run_name=compat.force_str("__main__"))
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/main.py", line 298, in <module>
+    main(args)
+  File "/home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/main.py", line 192, in main
+    optimizer.step()
+  File "/anaconda/envs/fakenews/lib/python3.7/site-packages/torch/optim/optimizer.py", line 109, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda/envs/fakenews/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/anaconda/envs/fakenews/lib/python3.7/site-packages/torch/optim/adam.py", line 171, in step
+    capturable=group['capturable'])
+  File "/anaconda/envs/fakenews/lib/python3.7/site-packages/torch/optim/adam.py", line 226, in adam
+    capturable=capturable)
+  File "/anaconda/envs/fakenews/lib/python3.7/site-packages/torch/optim/adam.py", line 265, in _single_tensor_adam
+    exp_avg_sq.mul_(beta2).addcmul_(grad, grad.conj(), value=1 - beta2)
+KeyboardInterrupt

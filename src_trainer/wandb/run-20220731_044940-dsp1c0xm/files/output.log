@@ -1,0 +1,10 @@
+
+loading data
+.DS_Store
+image length 360
+train data size is 14129
+.DS_Store
+image length 50
+test data size is 1380
+TEXT: 14129, Image: 14129, label: 14129, Mask: 14129
+TEXT: 1380, Image: 1380, label: 1380, Mask: 1380

@@ -1,0 +1,151 @@
+[2022-08-02 23:18:12,216 main.py]: loading data
+[2022-08-02 23:18:12,216 tokenization_utils.py]: Model name 'hfl/chinese-roberta-wwm-ext' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, TurkuNLP/bert-base-finnish-cased-v1, TurkuNLP/bert-base-finnish-uncased-v1, wietsedv/bert-base-dutch-cased). Assuming 'hfl/chinese-roberta-wwm-ext' is a path, a model identifier, or url to a directory containing tokenizer files.
+[2022-08-02 23:18:13,518 tokenization_utils.py]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/vocab.txt from cache at /home/v-zuangao/.cache/torch/transformers/5593eb652e3fb9a17042385245a61389ce6f0c8a25e167519477d7efbdf2459a.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+[2022-08-02 23:18:13,519 tokenization_utils.py]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/added_tokens.json from cache at /home/v-zuangao/.cache/torch/transformers/23740a16768d945f44a24590dc8f5e572773b1b2868c5e58f7ff4fae2a721c49.3889713104075cfee9e96090bcdd0dc753733b3db9da20d1dd8b2cd1030536a2
+[2022-08-02 23:18:13,519 tokenization_utils.py]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/special_tokens_map.json from cache at /home/v-zuangao/.cache/torch/transformers/6f13f9fe28f96dd7be36b84708332115ef90b3b310918502c13a8f719a225de2.275045728fbf41c11d3dae08b8742c054377e18d92cc7b72b6351152a99b64e4
+[2022-08-02 23:18:13,519 tokenization_utils.py]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/tokenizer_config.json from cache at /home/v-zuangao/.cache/torch/transformers/5bb5761fdb6c8f42bf7705c27c48cffd8b40afa8278fa035bc81bf288f108af9.1ade4e0ac224a06d83f2cb9821a6656b6b59974d6552e8c728f2657e4ba445d9
+Building prefix dict from the default dictionary ...
+[2022-08-02 23:20:17,466 __init__.py]: Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+[2022-08-02 23:20:17,466 __init__.py]: Loading model from cache /tmp/jieba.cache
+Loading model cost 0.476 seconds.
+[2022-08-02 23:20:17,942 __init__.py]: Loading model cost 0.476 seconds.
+Prefix dict has been built successfully.
+[2022-08-02 23:20:17,944 __init__.py]: Prefix dict has been built successfully.
+TEXT: 4766, Image: 4766, label: 4766, Mask: 4766
+TEXT: 1331, Image: 1331, label: 1331, Mask: 1331
+[2022-08-02 23:22:39,395 main.py]: Train data_length => TEXT: 4766, Image: 4766, label: 4766, Mask: 4766
+[2022-08-02 23:22:39,457 main.py]: Test data_length => TEXT: 1331, Image: 1331, label: 1331, Mask: 1331
+[2022-08-02 23:22:39,457 main.py]: building model
+[2022-08-02 23:22:40,103 configuration_utils.py]: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/config.json from cache at /home/v-zuangao/.cache/torch/transformers/3227a4c62d38cb0f891e7ccb8fc0b7b7dbd873889b3688c2e95834fb6f6109be.573c56a39f56f50b7bc6e9803d92871c74059419e37e87c5b14d49b1546b0703
+[2022-08-02 23:22:40,103 configuration_utils.py]: Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "directionality": "bidi",
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+[2022-08-02 23:22:40,180 modeling_utils.py]: loading weights file https://cdn.huggingface.co/hfl/chinese-roberta-wwm-ext/pytorch_model.bin from cache at /home/v-zuangao/.cache/torch/transformers/47d2326d47246cef3121d70d592c0391a4ed594b04ce3dea8bd47edd37e20370.6ac27309c356295f0e005c6029fce503ec6a32853911ebf79f8bddd8dd10edad
+[2022-08-02 23:22:41,383 main.py]: expType: all, train in expCode: all_epoch50_freeze, batch_size 256, epoch = 50, lr = 0.0001
+[2022-08-02 23:22:42,194 main.py]: start training model
+Checkpoint Directory exists!
+[2022-08-02 23:23:18,375 main.py]: Epoch [1/50],  epoch_train_loss: 0.6646, epoch_val_loss: 0.5847, Train_Acc: 0.6221,  Val_Acc: 0.7340, Val_F1: 0.7329, Val_Pre: 0.7351, Val_Rec: 0.7329.
+Checkpoint Directory exists!
+[2022-08-02 23:23:55,697 main.py]: Epoch [2/50],  epoch_train_loss: 0.5290, epoch_val_loss: 0.4788, Train_Acc: 0.8368,  Val_Acc: 0.8512, Val_F1: 0.8510, Val_Pre: 0.8569, Val_Rec: 0.8529.
+Checkpoint Directory exists!
+[2022-08-02 23:24:51,965 main.py]: Epoch [3/50],  epoch_train_loss: 0.4387, epoch_val_loss: 0.4355, Train_Acc: 0.8949,  Val_Acc: 0.8896, Val_F1: 0.8896, Val_Pre: 0.8898, Val_Rec: 0.8900.
+Checkpoint Directory exists!
+[2022-08-02 23:25:46,565 main.py]: Epoch [4/50],  epoch_train_loss: 0.4075, epoch_val_loss: 0.4172, Train_Acc: 0.9108,  Val_Acc: 0.9008, Val_F1: 0.9008, Val_Pre: 0.9016, Val_Rec: 0.9015.
+[2022-08-02 23:26:41,912 main.py]: Epoch [5/50],  epoch_train_loss: 0.3875, epoch_val_loss: 0.4389, Train_Acc: 0.9299,  Val_Acc: 0.8873, Val_F1: 0.8871, Val_Pre: 0.8934, Val_Rec: 0.8890.
+[2022-08-02 23:27:18,056 main.py]: Epoch [6/50],  epoch_train_loss: 0.3726, epoch_val_loss: 0.4391, Train_Acc: 0.9436,  Val_Acc: 0.8896, Val_F1: 0.8894, Val_Pre: 0.8950, Val_Rec: 0.8912.
+[2022-08-02 23:27:54,316 main.py]: Epoch [7/50],  epoch_train_loss: 0.3605, epoch_val_loss: 0.4352, Train_Acc: 0.9557,  Val_Acc: 0.8956, Val_F1: 0.8954, Val_Pre: 0.9007, Val_Rec: 0.8971.
+Checkpoint Directory exists!
+[2022-08-02 23:28:30,743 main.py]: Epoch [8/50],  epoch_train_loss: 0.3545, epoch_val_loss: 0.4165, Train_Acc: 0.9610,  Val_Acc: 0.9083, Val_F1: 0.9083, Val_Pre: 0.9105, Val_Rec: 0.9094.
+Checkpoint Directory exists!
+[2022-08-02 23:29:25,131 main.py]: Epoch [9/50],  epoch_train_loss: 0.3458, epoch_val_loss: 0.4086, Train_Acc: 0.9696,  Val_Acc: 0.9174, Val_F1: 0.9174, Val_Pre: 0.9185, Val_Rec: 0.9182.
+[2022-08-02 23:30:22,061 main.py]: Epoch [10/50],  epoch_train_loss: 0.3438, epoch_val_loss: 0.4431, Train_Acc: 0.9702,  Val_Acc: 0.8873, Val_F1: 0.8870, Val_Pre: 0.8961, Val_Rec: 0.8893.
+[2022-08-02 23:30:58,599 main.py]: Epoch [11/50],  epoch_train_loss: 0.3398, epoch_val_loss: 0.4079, Train_Acc: 0.9755,  Val_Acc: 0.9174, Val_F1: 0.9173, Val_Pre: 0.9175, Val_Rec: 0.9178.
+[2022-08-02 23:31:35,142 main.py]: Epoch [12/50],  epoch_train_loss: 0.3355, epoch_val_loss: 0.4105, Train_Acc: 0.9788,  Val_Acc: 0.9136, Val_F1: 0.9136, Val_Pre: 0.9149, Val_Rec: 0.9144.
+[2022-08-02 23:32:11,717 main.py]: Epoch [13/50],  epoch_train_loss: 0.3395, epoch_val_loss: 0.4251, Train_Acc: 0.9742,  Val_Acc: 0.9031, Val_F1: 0.9029, Val_Pre: 0.9102, Val_Rec: 0.9049.
+Checkpoint Directory exists!
+[2022-08-02 23:32:48,323 main.py]: Epoch [14/50],  epoch_train_loss: 0.3426, epoch_val_loss: 0.4043, Train_Acc: 0.9710,  Val_Acc: 0.9249, Val_F1: 0.9249, Val_Pre: 0.9258, Val_Rec: 0.9256.
+[2022-08-02 23:33:45,828 main.py]: Epoch [15/50],  epoch_train_loss: 0.3370, epoch_val_loss: 0.4232, Train_Acc: 0.9767,  Val_Acc: 0.9008, Val_F1: 0.9007, Val_Pre: 0.9071, Val_Rec: 0.9025.
+[2022-08-02 23:34:22,438 main.py]: Epoch [16/50],  epoch_train_loss: 0.3341, epoch_val_loss: 0.4076, Train_Acc: 0.9792,  Val_Acc: 0.9136, Val_F1: 0.9136, Val_Pre: 0.9142, Val_Rec: 0.9142.
+[2022-08-02 23:34:59,059 main.py]: Epoch [17/50],  epoch_train_loss: 0.3333, epoch_val_loss: 0.4081, Train_Acc: 0.9805,  Val_Acc: 0.9091, Val_F1: 0.9091, Val_Pre: 0.9091, Val_Rec: 0.9094.
+[2022-08-02 23:35:35,750 main.py]: Epoch [18/50],  epoch_train_loss: 0.3344, epoch_val_loss: 0.4524, Train_Acc: 0.9792,  Val_Acc: 0.8783, Val_F1: 0.8776, Val_Pre: 0.8931, Val_Rec: 0.8809.
+[2022-08-02 23:36:12,575 main.py]: Epoch [19/50],  epoch_train_loss: 0.3340, epoch_val_loss: 0.4475, Train_Acc: 0.9807,  Val_Acc: 0.8760, Val_F1: 0.8754, Val_Pre: 0.8901, Val_Rec: 0.8786.
+[2022-08-02 23:36:49,112 main.py]: Epoch [20/50],  epoch_train_loss: 0.3320, epoch_val_loss: 0.3980, Train_Acc: 0.9813,  Val_Acc: 0.9204, Val_F1: 0.9203, Val_Pre: 0.9203, Val_Rec: 0.9205.
+[2022-08-02 23:37:25,657 main.py]: Epoch [21/50],  epoch_train_loss: 0.3294, epoch_val_loss: 0.3968, Train_Acc: 0.9843,  Val_Acc: 0.9249, Val_F1: 0.9249, Val_Pre: 0.9252, Val_Rec: 0.9254.
+[2022-08-02 23:38:02,202 main.py]: Epoch [22/50],  epoch_train_loss: 0.3284, epoch_val_loss: 0.4016, Train_Acc: 0.9851,  Val_Acc: 0.9189, Val_F1: 0.9189, Val_Pre: 0.9191, Val_Rec: 0.9193.
+[2022-08-02 23:38:38,795 main.py]: Epoch [23/50],  epoch_train_loss: 0.3283, epoch_val_loss: 0.4075, Train_Acc: 0.9849,  Val_Acc: 0.9151, Val_F1: 0.9151, Val_Pre: 0.9153, Val_Rec: 0.9155.
+[2022-08-02 23:39:15,183 main.py]: Epoch [24/50],  epoch_train_loss: 0.3277, epoch_val_loss: 0.4214, Train_Acc: 0.9855,  Val_Acc: 0.9001, Val_F1: 0.9000, Val_Pre: 0.9035, Val_Rec: 0.9014.
+[2022-08-02 23:39:51,566 main.py]: Epoch [25/50],  epoch_train_loss: 0.3259, epoch_val_loss: 0.4413, Train_Acc: 0.9874,  Val_Acc: 0.8843, Val_F1: 0.8840, Val_Pre: 0.8920, Val_Rec: 0.8862.
+[2022-08-02 23:40:27,964 main.py]: Epoch [26/50],  epoch_train_loss: 0.3268, epoch_val_loss: 0.4539, Train_Acc: 0.9862,  Val_Acc: 0.8723, Val_F1: 0.8717, Val_Pre: 0.8838, Val_Rec: 0.8746.
+[2022-08-02 23:41:04,567 main.py]: Epoch [27/50],  epoch_train_loss: 0.3261, epoch_val_loss: 0.4369, Train_Acc: 0.9876,  Val_Acc: 0.8896, Val_F1: 0.8894, Val_Pre: 0.8952, Val_Rec: 0.8912.
+[2022-08-02 23:41:41,107 main.py]: Epoch [28/50],  epoch_train_loss: 0.3244, epoch_val_loss: 0.4341, Train_Acc: 0.9887,  Val_Acc: 0.8993, Val_F1: 0.8992, Val_Pre: 0.9053, Val_Rec: 0.9010.
+[2022-08-02 23:42:17,677 main.py]: Epoch [29/50],  epoch_train_loss: 0.3297, epoch_val_loss: 0.4026, Train_Acc: 0.9830,  Val_Acc: 0.9219, Val_F1: 0.9219, Val_Pre: 0.9224, Val_Rec: 0.9224.
+[2022-08-02 23:42:54,412 main.py]: Epoch [30/50],  epoch_train_loss: 0.3312, epoch_val_loss: 0.4109, Train_Acc: 0.9815,  Val_Acc: 0.9113, Val_F1: 0.9113, Val_Pre: 0.9131, Val_Rec: 0.9123.
+[2022-08-02 23:43:30,995 main.py]: Epoch [31/50],  epoch_train_loss: 0.3255, epoch_val_loss: 0.4168, Train_Acc: 0.9874,  Val_Acc: 0.9091, Val_F1: 0.9091, Val_Pre: 0.9117, Val_Rec: 0.9102.
+[2022-08-02 23:44:07,604 main.py]: Epoch [32/50],  epoch_train_loss: 0.3239, epoch_val_loss: 0.4150, Train_Acc: 0.9895,  Val_Acc: 0.9083, Val_F1: 0.9083, Val_Pre: 0.9107, Val_Rec: 0.9094.
+[2022-08-02 23:44:44,126 main.py]: Epoch [33/50],  epoch_train_loss: 0.3251, epoch_val_loss: 0.4132, Train_Acc: 0.9883,  Val_Acc: 0.9106, Val_F1: 0.9106, Val_Pre: 0.9121, Val_Rec: 0.9115.
+[2022-08-02 23:45:20,558 main.py]: Epoch [34/50],  epoch_train_loss: 0.3233, epoch_val_loss: 0.4136, Train_Acc: 0.9899,  Val_Acc: 0.9144, Val_F1: 0.9143, Val_Pre: 0.9163, Val_Rec: 0.9154.
+[2022-08-02 23:45:56,937 main.py]: Epoch [35/50],  epoch_train_loss: 0.3242, epoch_val_loss: 0.4515, Train_Acc: 0.9889,  Val_Acc: 0.8813, Val_F1: 0.8809, Val_Pre: 0.8918, Val_Rec: 0.8835.
+[2022-08-02 23:46:33,393 main.py]: Epoch [36/50],  epoch_train_loss: 0.3274, epoch_val_loss: 0.4401, Train_Acc: 0.9864,  Val_Acc: 0.8896, Val_F1: 0.8891, Val_Pre: 0.9017, Val_Rec: 0.8919.
+[2022-08-02 23:47:10,016 main.py]: Epoch [37/50],  epoch_train_loss: 0.3281, epoch_val_loss: 0.4807, Train_Acc: 0.9849,  Val_Acc: 0.8467, Val_F1: 0.8448, Val_Pre: 0.8728, Val_Rec: 0.8502.
+[2022-08-02 23:47:46,590 main.py]: Epoch [38/50],  epoch_train_loss: 0.3281, epoch_val_loss: 0.4261, Train_Acc: 0.9851,  Val_Acc: 0.9023, Val_F1: 0.9023, Val_Pre: 0.9059, Val_Rec: 0.9036.
+[2022-08-02 23:48:23,235 main.py]: Epoch [39/50],  epoch_train_loss: 0.3282, epoch_val_loss: 0.4084, Train_Acc: 0.9853,  Val_Acc: 0.9166, Val_F1: 0.9166, Val_Pre: 0.9167, Val_Rec: 0.9170.
+[2022-08-02 23:48:59,811 main.py]: Epoch [40/50],  epoch_train_loss: 0.3275, epoch_val_loss: 0.4074, Train_Acc: 0.9855,  Val_Acc: 0.9181, Val_F1: 0.9181, Val_Pre: 0.9197, Val_Rec: 0.9190.
+[2022-08-02 23:49:36,305 main.py]: Epoch [41/50],  epoch_train_loss: 0.3231, epoch_val_loss: 0.4433, Train_Acc: 0.9901,  Val_Acc: 0.8866, Val_F1: 0.8861, Val_Pre: 0.8978, Val_Rec: 0.8888.
+[2022-08-02 23:50:12,822 main.py]: Epoch [42/50],  epoch_train_loss: 0.3218, epoch_val_loss: 0.4117, Train_Acc: 0.9914,  Val_Acc: 0.9144, Val_F1: 0.9143, Val_Pre: 0.9165, Val_Rec: 0.9154.
+[2022-08-02 23:50:49,243 main.py]: Epoch [43/50],  epoch_train_loss: 0.3231, epoch_val_loss: 0.4213, Train_Acc: 0.9899,  Val_Acc: 0.9091, Val_F1: 0.9090, Val_Pre: 0.9144, Val_Rec: 0.9107.
+[2022-08-02 23:51:25,620 main.py]: Epoch [44/50],  epoch_train_loss: 0.3231, epoch_val_loss: 0.4204, Train_Acc: 0.9895,  Val_Acc: 0.9106, Val_F1: 0.9106, Val_Pre: 0.9134, Val_Rec: 0.9118.
+[2022-08-02 23:52:01,910 main.py]: Epoch [45/50],  epoch_train_loss: 0.3244, epoch_val_loss: 0.4090, Train_Acc: 0.9893,  Val_Acc: 0.9151, Val_F1: 0.9151, Val_Pre: 0.9152, Val_Rec: 0.9155.
+[2022-08-02 23:52:38,376 main.py]: Epoch [46/50],  epoch_train_loss: 0.3278, epoch_val_loss: 0.4034, Train_Acc: 0.9855,  Val_Acc: 0.9144, Val_F1: 0.9143, Val_Pre: 0.9143, Val_Rec: 0.9146.
+[2022-08-02 23:53:14,910 main.py]: Epoch [47/50],  epoch_train_loss: 0.3258, epoch_val_loss: 0.4024, Train_Acc: 0.9870,  Val_Acc: 0.9196, Val_F1: 0.9196, Val_Pre: 0.9195, Val_Rec: 0.9197.
+[2022-08-02 23:53:51,464 main.py]: Epoch [48/50],  epoch_train_loss: 0.3240, epoch_val_loss: 0.4014, Train_Acc: 0.9891,  Val_Acc: 0.9189, Val_F1: 0.9188, Val_Pre: 0.9188, Val_Rec: 0.9191.
+[2022-08-02 23:54:28,048 main.py]: Epoch [49/50],  epoch_train_loss: 0.3293, epoch_val_loss: 0.4059, Train_Acc: 0.9849,  Val_Acc: 0.9113, Val_F1: 0.9110, Val_Pre: 0.9139, Val_Rec: 0.9104.
+[2022-08-02 23:55:04,602 main.py]: Epoch [50/50],  epoch_train_loss: 0.3295, epoch_val_loss: 0.4449, Train_Acc: 0.9830,  Val_Acc: 0.8835, Val_F1: 0.8832, Val_Pre: 0.8928, Val_Rec: 0.8856.
+[2022-08-02 23:55:04,602 main.py]: start testing model
+[2022-08-02 23:55:05,228 configuration_utils.py]: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/config.json from cache at /home/v-zuangao/.cache/torch/transformers/3227a4c62d38cb0f891e7ccb8fc0b7b7dbd873889b3688c2e95834fb6f6109be.573c56a39f56f50b7bc6e9803d92871c74059419e37e87c5b14d49b1546b0703
+[2022-08-02 23:55:05,228 configuration_utils.py]: Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "directionality": "bidi",
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+[2022-08-02 23:55:05,360 modeling_utils.py]: loading weights file https://cdn.huggingface.co/hfl/chinese-roberta-wwm-ext/pytorch_model.bin from cache at /home/v-zuangao/.cache/torch/transformers/47d2326d47246cef3121d70d592c0391a4ed594b04ce3dea8bd47edd37e20370.6ac27309c356295f0e005c6029fce503ec6a32853911ebf79f8bddd8dd10edad
+[2022-08-02 23:55:12,789 main.py]: showing the cache model metrics
+[2022-08-02 23:55:12,789 main.py]: Classification Acc: 0.9226, F1: 0.9226, Precision: 0.9235, Recall: 0.9233, AUC-ROC: 0.9478
+[2022-08-02 23:55:12,792 main.py]: Classification report:
+              precision    recall  f1-score   support
+           0       0.90      0.95      0.92       648
+           1       0.95      0.90      0.92       683
+    accuracy                           0.92      1331
+   macro avg       0.92      0.92      0.92      1331
+weighted avg       0.92      0.92      0.92      1331
+[2022-08-02 23:55:12,792 main.py]: Classification confusion matrix:
+[[616  32]
+ [ 71 612]]

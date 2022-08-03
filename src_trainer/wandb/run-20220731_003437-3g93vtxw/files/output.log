@@ -1,0 +1,41 @@
+
+loading data
+.DS_Store
+image length 360
+train data size is 14129
+.DS_Store
+image length 50
+test data size is 1380
+TEXT: 14129, Image: 14129, label: 14129, Mask: 14129
+TEXT: 1380, Image: 1380, label: 1380, Mask: 1380
+building model
+expType: vis
+training model
+Traceback (most recent call last):
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/v-zuangao/.vscode-server/extensions/ms-python.python-2022.8.1/pythonFiles/lib/python/debugpy/__main__.py", line 45, in <module>
+    cli.main()
+  File "/home/v-zuangao/.vscode-server/extensions/ms-python.python-2022.8.1/pythonFiles/lib/python/debugpy/../debugpy/server/cli.py", line 444, in main
+    run()
+  File "/home/v-zuangao/.vscode-server/extensions/ms-python.python-2022.8.1/pythonFiles/lib/python/debugpy/../debugpy/server/cli.py", line 285, in run_file
+    runpy.run_path(target_as_str, run_name=compat.force_str("__main__"))
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/main.py", line 241, in <module>
+    main(args)
+  File "/home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/main.py", line 136, in main
+    class_outputs = model(train_image, train_text, train_types, train_mask)
+  File "/anaconda/envs/fakenews/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/model.py", line 89, in forward
+    image = F.leaky_relu(self.image_fc1(image)) # [n,hidden_size]
+  File "/anaconda/envs/fakenews/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1208, in __getattr__
+    type(self).__name__, name))
+AttributeError: 'Multimodal_Net' object has no attribute 'image_fc1'

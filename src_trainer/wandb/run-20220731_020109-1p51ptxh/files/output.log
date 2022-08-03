@@ -1,0 +1,35 @@
+
+loading data
+.DS_Store
+image length 360
+train data size is 14129
+.DS_Store
+image length 50
+test data size is 1380
+TEXT: 14129, Image: 14129, label: 14129, Mask: 14129
+TEXT: 1380, Image: 1380, label: 1380, Mask: 1380
+building model
+expType: vis
+training model
+Epoch [1/10],  Loss: 0.5456, Class Loss: 0.5456, Train_Acc: 0.8262,  Validate_Acc: 0.8887.
+Epoch [2/10],  Loss: 0.4363, Class Loss: 0.4363, Train_Acc: 0.9034,  Validate_Acc: 0.8978.
+Epoch [3/10],  Loss: 0.4110, Class Loss: 0.4110, Train_Acc: 0.9190,  Validate_Acc: 0.8874.
+Epoch [4/10],  Loss: 0.3958, Class Loss: 0.3958, Train_Acc: 0.9318,  Validate_Acc: 0.7819.
+Epoch [5/10],  Loss: 0.3871, Class Loss: 0.3871, Train_Acc: 0.9383,  Validate_Acc: 0.7832.
+Epoch [6/10],  Loss: 0.3810, Class Loss: 0.3810, Train_Acc: 0.9426,  Validate_Acc: 0.7812.
+Epoch [7/10],  Loss: 0.3767, Class Loss: 0.3767, Train_Acc: 0.9447,  Validate_Acc: 0.7799.
+Epoch [8/10],  Loss: 0.3747, Class Loss: 0.3747, Train_Acc: 0.9457,  Validate_Acc: 0.7812.
+Epoch [9/10],  Loss: 0.3715, Class Loss: 0.3715, Train_Acc: 0.9476,  Validate_Acc: 0.7786.
+Epoch [10/10],  Loss: 0.3702, Class Loss: 0.3702, Train_Acc: 0.9484,  Validate_Acc: 0.7786.
+testing model
+Classification Acc: 0.8862, AUC-ROC: 0.9665
+Classification report:
+              precision    recall  f1-score   support
+           0       0.86      1.00      0.93       989
+           1       0.99      0.60      0.75       391
+    accuracy                           0.89      1380
+   macro avg       0.93      0.80      0.84      1380
+weighted avg       0.90      0.89      0.88      1380
+Classification confusion matrix:
+[[987   2]
+ [155 236]]

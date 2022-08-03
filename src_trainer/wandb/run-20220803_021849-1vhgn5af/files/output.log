@@ -1,0 +1,120 @@
+[2022-08-03 02:18:51,815 main.py]: loading data
+[2022-08-03 02:18:52,464 tokenization_utils.py]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-base-vocab.json from cache at /home/v-zuangao/.cache/torch/transformers/d0c5776499adc1ded22493fae699da0971c1ee4c2587111707a4d177d20257a2.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
+[2022-08-03 02:18:52,464 tokenization_utils.py]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-base-merges.txt from cache at /home/v-zuangao/.cache/torch/transformers/b35e7cd126cd4229a746b5d5c29a749e8e84438b14bcdb575950584fe33207e8.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
+[2022-08-03 02:19:03,577 main.py]: Train data_length => TEXT: 14129, Image: 14129, label: 14129, Mask: 14129
+[2022-08-03 02:19:03,637 main.py]: Test data_length => TEXT: 1380, Image: 1380, label: 1380, Mask: 1380
+[2022-08-03 02:19:03,638 main.py]: building model
+[2022-08-03 02:19:04,235 configuration_utils.py]: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-base-config.json from cache at /home/v-zuangao/.cache/torch/transformers/e1a2a406b5a05063c31f4dfdee7608986ba7c6393f7f79db5e69dcd197208534.117c81977c5979de8c088352e74ec6e70f5c66096c28b61d3c50101609b39690
+[2022-08-03 02:19:04,235 configuration_utils.py]: Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}
+[2022-08-03 02:19:04,352 modeling_utils.py]: loading weights file https://cdn.huggingface.co/roberta-base-pytorch_model.bin from cache at /home/v-zuangao/.cache/torch/transformers/80b4a484eddeb259bec2f06a6f2f05d90934111628e0e1c09a33bd4a121358e1.49b88ba7ec2c26a7558dda98ca3884c3b80fa31cf43a1b1f23aef3ff81ba344e
+TEXT: 14129, Image: 14129, label: 14129, Mask: 14129
+TEXT: 1380, Image: 1380, label: 1380, Mask: 1380
+[2022-08-03 02:19:06,637 main.py]: expType: wo_fusion, train in expCode: wo_fusion_epoch50_freeze2, batch_size 256, epoch = 50, lr = 0.0001
+[2022-08-03 02:19:07,561 main.py]: start training model
+[2022-08-03 02:20:01,841 main.py]: Epoch [1/50],  epoch_train_loss: 0.5656, epoch_val_loss: 0.4917, Train_Acc: 0.8156,  Val_Acc: 0.8804, Val_F1: 0.8286, Val_Pre: 0.9248, Val_Rec: 0.7905.
+Checkpoint Directory exists!
+[2022-08-03 02:20:58,467 main.py]: Epoch [2/50],  epoch_train_loss: 0.4528, epoch_val_loss: 0.4551, Train_Acc: 0.8892,  Val_Acc: 0.8630, Val_F1: 0.8100, Val_Pre: 0.8728, Val_Rec: 0.7807.
+[2022-08-03 02:21:54,326 main.py]: Epoch [3/50],  epoch_train_loss: 0.4212, epoch_val_loss: 0.4536, Train_Acc: 0.9141,  Val_Acc: 0.8725, Val_F1: 0.8255, Val_Pre: 0.8805, Val_Rec: 0.7974.
+[2022-08-03 02:22:50,414 main.py]: Epoch [4/50],  epoch_train_loss: 0.4073, epoch_val_loss: 0.4509, Train_Acc: 0.9209,  Val_Acc: 0.8703, Val_F1: 0.8220, Val_Pre: 0.8787, Val_Rec: 0.7935.
+[2022-08-03 02:23:46,578 main.py]: Epoch [5/50],  epoch_train_loss: 0.3969, epoch_val_loss: 0.4546, Train_Acc: 0.9264,  Val_Acc: 0.8710, Val_F1: 0.8231, Val_Pre: 0.8793, Val_Rec: 0.7948.
+[2022-08-03 02:24:42,886 main.py]: Epoch [6/50],  epoch_train_loss: 0.3908, epoch_val_loss: 0.4664, Train_Acc: 0.9313,  Val_Acc: 0.7696, Val_F1: 0.6244, Val_Pre: 0.7736, Val_Rec: 0.6158.
+[2022-08-03 02:25:39,185 main.py]: Epoch [7/50],  epoch_train_loss: 0.3867, epoch_val_loss: 0.4761, Train_Acc: 0.9352,  Val_Acc: 0.7572, Val_F1: 0.5953, Val_Pre: 0.7500, Val_Rec: 0.5948.
+[2022-08-03 02:26:35,256 main.py]: Epoch [8/50],  epoch_train_loss: 0.3834, epoch_val_loss: 0.4855, Train_Acc: 0.9366,  Val_Acc: 0.7572, Val_F1: 0.5953, Val_Pre: 0.7500, Val_Rec: 0.5948.
+[2022-08-03 02:27:31,135 main.py]: Epoch [9/50],  epoch_train_loss: 0.3812, epoch_val_loss: 0.4959, Train_Acc: 0.9386,  Val_Acc: 0.7565, Val_F1: 0.5935, Val_Pre: 0.7486, Val_Rec: 0.5935.
+[2022-08-03 02:28:26,991 main.py]: Epoch [10/50],  epoch_train_loss: 0.3792, epoch_val_loss: 0.5046, Train_Acc: 0.9392,  Val_Acc: 0.7558, Val_F1: 0.5941, Val_Pre: 0.7436, Val_Rec: 0.5938.
+[2022-08-03 02:29:23,295 main.py]: Epoch [11/50],  epoch_train_loss: 0.3756, epoch_val_loss: 0.5161, Train_Acc: 0.9430,  Val_Acc: 0.7565, Val_F1: 0.5935, Val_Pre: 0.7486, Val_Rec: 0.5935.
+[2022-08-03 02:30:19,142 main.py]: Epoch [12/50],  epoch_train_loss: 0.3736, epoch_val_loss: 0.5110, Train_Acc: 0.9451,  Val_Acc: 0.7587, Val_F1: 0.5989, Val_Pre: 0.7528, Val_Rec: 0.5974.
+[2022-08-03 02:31:15,276 main.py]: Epoch [13/50],  epoch_train_loss: 0.3716, epoch_val_loss: 0.5131, Train_Acc: 0.9457,  Val_Acc: 0.7587, Val_F1: 0.5989, Val_Pre: 0.7528, Val_Rec: 0.5974.
+[2022-08-03 02:32:10,925 main.py]: Epoch [14/50],  epoch_train_loss: 0.3698, epoch_val_loss: 0.5137, Train_Acc: 0.9473,  Val_Acc: 0.7558, Val_F1: 0.5916, Val_Pre: 0.7472, Val_Rec: 0.5923.
+[2022-08-03 02:33:07,016 main.py]: Epoch [15/50],  epoch_train_loss: 0.3691, epoch_val_loss: 0.5127, Train_Acc: 0.9483,  Val_Acc: 0.7565, Val_F1: 0.5935, Val_Pre: 0.7486, Val_Rec: 0.5935.
+[2022-08-03 02:34:02,886 main.py]: Epoch [16/50],  epoch_train_loss: 0.3679, epoch_val_loss: 0.5095, Train_Acc: 0.9486,  Val_Acc: 0.7572, Val_F1: 0.5953, Val_Pre: 0.7500, Val_Rec: 0.5948.
+[2022-08-03 02:34:59,490 main.py]: Epoch [17/50],  epoch_train_loss: 0.3676, epoch_val_loss: 0.5075, Train_Acc: 0.9491,  Val_Acc: 0.7594, Val_F1: 0.6007, Val_Pre: 0.7542, Val_Rec: 0.5986.
+[2022-08-03 02:35:55,593 main.py]: Epoch [18/50],  epoch_train_loss: 0.3658, epoch_val_loss: 0.5000, Train_Acc: 0.9499,  Val_Acc: 0.7688, Val_F1: 0.6237, Val_Pre: 0.7706, Val_Rec: 0.6153.
+[2022-08-03 02:36:52,062 main.py]: Epoch [19/50],  epoch_train_loss: 0.3660, epoch_val_loss: 0.5091, Train_Acc: 0.9504,  Val_Acc: 0.7688, Val_F1: 0.6237, Val_Pre: 0.7706, Val_Rec: 0.6153.
+[2022-08-03 02:37:47,781 main.py]: Epoch [20/50],  epoch_train_loss: 0.3648, epoch_val_loss: 0.5069, Train_Acc: 0.9500,  Val_Acc: 0.7688, Val_F1: 0.6237, Val_Pre: 0.7706, Val_Rec: 0.6153.
+[2022-08-03 02:38:44,297 main.py]: Epoch [21/50],  epoch_train_loss: 0.3655, epoch_val_loss: 0.5037, Train_Acc: 0.9502,  Val_Acc: 0.7688, Val_F1: 0.6237, Val_Pre: 0.7706, Val_Rec: 0.6153.
+[2022-08-03 02:39:40,174 main.py]: Epoch [22/50],  epoch_train_loss: 0.3654, epoch_val_loss: 0.5096, Train_Acc: 0.9506,  Val_Acc: 0.7688, Val_F1: 0.6237, Val_Pre: 0.7706, Val_Rec: 0.6153.
+[2022-08-03 02:40:36,115 main.py]: Epoch [23/50],  epoch_train_loss: 0.3646, epoch_val_loss: 0.5051, Train_Acc: 0.9506,  Val_Acc: 0.7688, Val_F1: 0.6237, Val_Pre: 0.7706, Val_Rec: 0.6153.
+[2022-08-03 02:41:32,563 main.py]: Epoch [24/50],  epoch_train_loss: 0.3637, epoch_val_loss: 0.5044, Train_Acc: 0.9510,  Val_Acc: 0.7688, Val_F1: 0.6237, Val_Pre: 0.7706, Val_Rec: 0.6153.
+[2022-08-03 02:42:28,746 main.py]: Epoch [25/50],  epoch_train_loss: 0.3640, epoch_val_loss: 0.5056, Train_Acc: 0.9510,  Val_Acc: 0.7688, Val_F1: 0.6237, Val_Pre: 0.7706, Val_Rec: 0.6153.
+[2022-08-03 02:43:25,283 main.py]: Epoch [26/50],  epoch_train_loss: 0.3640, epoch_val_loss: 0.4997, Train_Acc: 0.9510,  Val_Acc: 0.7717, Val_F1: 0.6306, Val_Pre: 0.7752, Val_Rec: 0.6204.
+[2022-08-03 02:44:21,181 main.py]: Epoch [27/50],  epoch_train_loss: 0.3636, epoch_val_loss: 0.5075, Train_Acc: 0.9510,  Val_Acc: 0.7688, Val_F1: 0.6237, Val_Pre: 0.7706, Val_Rec: 0.6153.
+[2022-08-03 02:45:17,122 main.py]: Epoch [28/50],  epoch_train_loss: 0.3633, epoch_val_loss: 0.5040, Train_Acc: 0.9513,  Val_Acc: 0.7681, Val_F1: 0.6198, Val_Pre: 0.7732, Val_Rec: 0.6124.
+[2022-08-03 02:46:13,041 main.py]: Epoch [29/50],  epoch_train_loss: 0.3626, epoch_val_loss: 0.5052, Train_Acc: 0.9514,  Val_Acc: 0.7667, Val_F1: 0.6185, Val_Pre: 0.7670, Val_Rec: 0.6114.
+[2022-08-03 02:47:09,254 main.py]: Epoch [30/50],  epoch_train_loss: 0.3635, epoch_val_loss: 0.5053, Train_Acc: 0.9512,  Val_Acc: 0.7667, Val_F1: 0.6185, Val_Pre: 0.7670, Val_Rec: 0.6114.
+[2022-08-03 02:48:04,839 main.py]: Epoch [31/50],  epoch_train_loss: 0.3625, epoch_val_loss: 0.5043, Train_Acc: 0.9510,  Val_Acc: 0.7667, Val_F1: 0.6185, Val_Pre: 0.7670, Val_Rec: 0.6114.
+[2022-08-03 02:49:00,961 main.py]: Epoch [32/50],  epoch_train_loss: 0.3624, epoch_val_loss: 0.5058, Train_Acc: 0.9514,  Val_Acc: 0.7667, Val_F1: 0.6185, Val_Pre: 0.7670, Val_Rec: 0.6114.
+[2022-08-03 02:49:56,811 main.py]: Epoch [33/50],  epoch_train_loss: 0.3633, epoch_val_loss: 0.5013, Train_Acc: 0.9514,  Val_Acc: 0.7688, Val_F1: 0.6237, Val_Pre: 0.7706, Val_Rec: 0.6153.
+[2022-08-03 02:50:52,941 main.py]: Epoch [34/50],  epoch_train_loss: 0.3622, epoch_val_loss: 0.5049, Train_Acc: 0.9514,  Val_Acc: 0.7681, Val_F1: 0.6198, Val_Pre: 0.7732, Val_Rec: 0.6124.
+[2022-08-03 02:51:48,857 main.py]: Epoch [35/50],  epoch_train_loss: 0.3622, epoch_val_loss: 0.4998, Train_Acc: 0.9515,  Val_Acc: 0.7681, Val_F1: 0.6198, Val_Pre: 0.7732, Val_Rec: 0.6124.
+[2022-08-03 02:52:44,666 main.py]: Epoch [36/50],  epoch_train_loss: 0.3631, epoch_val_loss: 0.4988, Train_Acc: 0.9516,  Val_Acc: 0.7667, Val_F1: 0.6185, Val_Pre: 0.7670, Val_Rec: 0.6114.
+[2022-08-03 02:53:40,092 main.py]: Epoch [37/50],  epoch_train_loss: 0.3630, epoch_val_loss: 0.5046, Train_Acc: 0.9517,  Val_Acc: 0.7681, Val_F1: 0.6198, Val_Pre: 0.7732, Val_Rec: 0.6124.
+[2022-08-03 02:54:36,155 main.py]: Epoch [38/50],  epoch_train_loss: 0.3621, epoch_val_loss: 0.5013, Train_Acc: 0.9516,  Val_Acc: 0.7681, Val_F1: 0.6198, Val_Pre: 0.7732, Val_Rec: 0.6124.
+[2022-08-03 02:55:31,978 main.py]: Epoch [39/50],  epoch_train_loss: 0.3618, epoch_val_loss: 0.4994, Train_Acc: 0.9516,  Val_Acc: 0.7667, Val_F1: 0.6185, Val_Pre: 0.7670, Val_Rec: 0.6114.
+[2022-08-03 02:56:28,100 main.py]: Epoch [40/50],  epoch_train_loss: 0.3625, epoch_val_loss: 0.4993, Train_Acc: 0.9517,  Val_Acc: 0.7681, Val_F1: 0.6198, Val_Pre: 0.7732, Val_Rec: 0.6124.
+[2022-08-03 02:57:23,676 main.py]: Epoch [41/50],  epoch_train_loss: 0.3621, epoch_val_loss: 0.4987, Train_Acc: 0.9517,  Val_Acc: 0.7877, Val_F1: 0.6371, Val_Pre: 0.8809, Val_Rec: 0.6261.
+[2022-08-03 02:58:19,564 main.py]: Epoch [42/50],  epoch_train_loss: 0.3618, epoch_val_loss: 0.5035, Train_Acc: 0.9516,  Val_Acc: 0.7681, Val_F1: 0.6198, Val_Pre: 0.7732, Val_Rec: 0.6124.
+[2022-08-03 02:59:15,084 main.py]: Epoch [43/50],  epoch_train_loss: 0.3619, epoch_val_loss: 0.5007, Train_Acc: 0.9518,  Val_Acc: 0.7681, Val_F1: 0.6198, Val_Pre: 0.7732, Val_Rec: 0.6124.
+[2022-08-03 03:00:11,038 main.py]: Epoch [44/50],  epoch_train_loss: 0.3618, epoch_val_loss: 0.5004, Train_Acc: 0.9518,  Val_Acc: 0.7870, Val_F1: 0.6352, Val_Pre: 0.8806, Val_Rec: 0.6248.
+[2022-08-03 03:01:06,498 main.py]: Epoch [45/50],  epoch_train_loss: 0.3617, epoch_val_loss: 0.5006, Train_Acc: 0.9518,  Val_Acc: 0.7681, Val_F1: 0.6198, Val_Pre: 0.7732, Val_Rec: 0.6124.
+[2022-08-03 03:02:02,428 main.py]: Epoch [46/50],  epoch_train_loss: 0.3616, epoch_val_loss: 0.4928, Train_Acc: 0.9519,  Val_Acc: 0.7681, Val_F1: 0.6198, Val_Pre: 0.7732, Val_Rec: 0.6124.
+[2022-08-03 03:02:57,946 main.py]: Epoch [47/50],  epoch_train_loss: 0.3617, epoch_val_loss: 0.5020, Train_Acc: 0.9517,  Val_Acc: 0.7681, Val_F1: 0.6198, Val_Pre: 0.7732, Val_Rec: 0.6124.
+[2022-08-03 03:03:54,057 main.py]: Epoch [48/50],  epoch_train_loss: 0.3611, epoch_val_loss: 0.4909, Train_Acc: 0.9519,  Val_Acc: 0.7877, Val_F1: 0.6371, Val_Pre: 0.8809, Val_Rec: 0.6261.
+[2022-08-03 03:04:49,612 main.py]: Epoch [49/50],  epoch_train_loss: 0.3618, epoch_val_loss: 0.4864, Train_Acc: 0.9521,  Val_Acc: 0.7877, Val_F1: 0.6371, Val_Pre: 0.8809, Val_Rec: 0.6261.
+[2022-08-03 03:05:45,652 main.py]: Epoch [50/50],  epoch_train_loss: 0.3609, epoch_val_loss: 0.4728, Train_Acc: 0.9524,  Val_Acc: 0.7877, Val_F1: 0.6371, Val_Pre: 0.8809, Val_Rec: 0.6261.
+[2022-08-03 03:05:45,652 main.py]: start testing model
+[2022-08-03 03:05:46,271 configuration_utils.py]: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-base-config.json from cache at /home/v-zuangao/.cache/torch/transformers/e1a2a406b5a05063c31f4dfdee7608986ba7c6393f7f79db5e69dcd197208534.117c81977c5979de8c088352e74ec6e70f5c66096c28b61d3c50101609b39690
+[2022-08-03 03:05:46,271 configuration_utils.py]: Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}
+[2022-08-03 03:05:46,401 modeling_utils.py]: loading weights file https://cdn.huggingface.co/roberta-base-pytorch_model.bin from cache at /home/v-zuangao/.cache/torch/transformers/80b4a484eddeb259bec2f06a6f2f05d90934111628e0e1c09a33bd4a121358e1.49b88ba7ec2c26a7558dda98ca3884c3b80fa31cf43a1b1f23aef3ff81ba344e
+[2022-08-03 03:05:53,970 main.py]: showing the cache model metrics
+[2022-08-03 03:05:53,970 main.py]: Classification Acc: 0.8804, F1: 0.8286, Precision: 0.9248, Recall: 0.7905, AUC-ROC: 0.9634
+[2022-08-03 03:05:53,973 main.py]: Classification report:
+              precision    recall  f1-score   support
+           0       0.86      1.00      0.92       989
+           1       0.99      0.58      0.73       391
+    accuracy                           0.88      1380
+   macro avg       0.92      0.79      0.83      1380
+weighted avg       0.90      0.88      0.87      1380
+[2022-08-03 03:05:53,974 main.py]: Classification confusion matrix:
+[[987   2]
+ [163 228]]

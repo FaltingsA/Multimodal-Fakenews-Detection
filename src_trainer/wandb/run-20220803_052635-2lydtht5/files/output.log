@@ -1,0 +1,169 @@
+[2022-08-03 05:26:37,180 main.py]: loading data
+[2022-08-03 05:26:37,180 tokenization_utils.py]: Model name 'hfl/chinese-roberta-wwm-ext' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, TurkuNLP/bert-base-finnish-cased-v1, TurkuNLP/bert-base-finnish-uncased-v1, wietsedv/bert-base-dutch-cased). Assuming 'hfl/chinese-roberta-wwm-ext' is a path, a model identifier, or url to a directory containing tokenizer files.
+[2022-08-03 05:26:38,476 tokenization_utils.py]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/vocab.txt from cache at /home/v-zuangao/.cache/torch/transformers/5593eb652e3fb9a17042385245a61389ce6f0c8a25e167519477d7efbdf2459a.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+[2022-08-03 05:26:38,476 tokenization_utils.py]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/added_tokens.json from cache at /home/v-zuangao/.cache/torch/transformers/23740a16768d945f44a24590dc8f5e572773b1b2868c5e58f7ff4fae2a721c49.3889713104075cfee9e96090bcdd0dc753733b3db9da20d1dd8b2cd1030536a2
+[2022-08-03 05:26:38,476 tokenization_utils.py]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/special_tokens_map.json from cache at /home/v-zuangao/.cache/torch/transformers/6f13f9fe28f96dd7be36b84708332115ef90b3b310918502c13a8f719a225de2.275045728fbf41c11d3dae08b8742c054377e18d92cc7b72b6351152a99b64e4
+[2022-08-03 05:26:38,476 tokenization_utils.py]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/tokenizer_config.json from cache at /home/v-zuangao/.cache/torch/transformers/5bb5761fdb6c8f42bf7705c27c48cffd8b40afa8278fa035bc81bf288f108af9.1ade4e0ac224a06d83f2cb9821a6656b6b59974d6552e8c728f2657e4ba445d9
+Building prefix dict from the default dictionary ...
+[2022-08-03 05:28:42,025 __init__.py]: Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+[2022-08-03 05:28:42,026 __init__.py]: Loading model from cache /tmp/jieba.cache
+Loading model cost 0.467 seconds.
+[2022-08-03 05:28:42,492 __init__.py]: Loading model cost 0.467 seconds.
+Prefix dict has been built successfully.
+[2022-08-03 05:28:42,493 __init__.py]: Prefix dict has been built successfully.
+TEXT: 4766, Image: 4766, label: 4766, Mask: 4766
+TEXT: 1331, Image: 1331, label: 1331, Mask: 1331
+[2022-08-03 05:31:03,695 main.py]: Train data_length => TEXT: 4766, Image: 4766, label: 4766, Mask: 4766
+[2022-08-03 05:31:03,750 main.py]: Test data_length => TEXT: 1331, Image: 1331, label: 1331, Mask: 1331
+[2022-08-03 05:31:03,751 main.py]: building model
+[2022-08-03 05:31:04,364 configuration_utils.py]: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/config.json from cache at /home/v-zuangao/.cache/torch/transformers/3227a4c62d38cb0f891e7ccb8fc0b7b7dbd873889b3688c2e95834fb6f6109be.573c56a39f56f50b7bc6e9803d92871c74059419e37e87c5b14d49b1546b0703
+[2022-08-03 05:31:04,364 configuration_utils.py]: Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "directionality": "bidi",
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+[2022-08-03 05:31:04,807 modeling_utils.py]: loading weights file https://cdn.huggingface.co/hfl/chinese-roberta-wwm-ext/pytorch_model.bin from cache at /home/v-zuangao/.cache/torch/transformers/47d2326d47246cef3121d70d592c0391a4ed594b04ce3dea8bd47edd37e20370.6ac27309c356295f0e005c6029fce503ec6a32853911ebf79f8bddd8dd10edad
+[2022-08-03 05:31:05,983 main.py]: expType: wo_fusion, train in expCode: wo_fusion_epoch50_freeze2, batch_size 256, epoch = 50, lr = 0.0001
+[2022-08-03 05:31:06,781 main.py]: start training model
+Checkpoint Directory exists!
+[2022-08-03 05:31:28,919 main.py]: Epoch [1/50],  epoch_train_loss: 0.6799, epoch_val_loss: 0.6915, Train_Acc: 0.5594,  Val_Acc: 0.5101, Val_F1: 0.4659, Val_Pre: 0.5042, Val_Rec: 0.5029.
+Checkpoint Directory exists!
+[2022-08-03 05:31:51,765 main.py]: Epoch [2/50],  epoch_train_loss: 0.6553, epoch_val_loss: 0.6826, Train_Acc: 0.6219,  Val_Acc: 0.5424, Val_F1: 0.5231, Val_Pre: 0.5437, Val_Rec: 0.5375.
+Checkpoint Directory exists!
+[2022-08-03 05:32:25,407 main.py]: Epoch [3/50],  epoch_train_loss: 0.6357, epoch_val_loss: 0.6696, Train_Acc: 0.6620,  Val_Acc: 0.6018, Val_F1: 0.6015, Val_Pre: 0.6015, Val_Rec: 0.6014.
+Checkpoint Directory exists!
+[2022-08-03 05:32:58,479 main.py]: Epoch [4/50],  epoch_train_loss: 0.6210, epoch_val_loss: 0.6623, Train_Acc: 0.6932,  Val_Acc: 0.6123, Val_F1: 0.6099, Val_Pre: 0.6188, Val_Rec: 0.6148.
+Checkpoint Directory exists!
+[2022-08-03 05:33:32,483 main.py]: Epoch [5/50],  epoch_train_loss: 0.6076, epoch_val_loss: 0.6397, Train_Acc: 0.7151,  Val_Acc: 0.6394, Val_F1: 0.6356, Val_Pre: 0.6415, Val_Rec: 0.6371.
+Checkpoint Directory exists!
+[2022-08-03 05:34:06,034 main.py]: Epoch [6/50],  epoch_train_loss: 0.5949, epoch_val_loss: 0.6345, Train_Acc: 0.7346,  Val_Acc: 0.6634, Val_F1: 0.6634, Val_Pre: 0.6637, Val_Rec: 0.6638.
+Checkpoint Directory exists!
+[2022-08-03 05:34:40,144 main.py]: Epoch [7/50],  epoch_train_loss: 0.5854, epoch_val_loss: 0.6227, Train_Acc: 0.7444,  Val_Acc: 0.6754, Val_F1: 0.6738, Val_Pre: 0.6762, Val_Rec: 0.6741.
+Checkpoint Directory exists!
+[2022-08-03 05:35:12,868 main.py]: Epoch [8/50],  epoch_train_loss: 0.5772, epoch_val_loss: 0.6177, Train_Acc: 0.7514,  Val_Acc: 0.6912, Val_F1: 0.6908, Val_Pre: 0.6942, Val_Rec: 0.6926.
+Checkpoint Directory exists!
+[2022-08-03 05:35:46,892 main.py]: Epoch [9/50],  epoch_train_loss: 0.5659, epoch_val_loss: 0.6053, Train_Acc: 0.7673,  Val_Acc: 0.7070, Val_F1: 0.7062, Val_Pre: 0.7072, Val_Rec: 0.7062.
+Checkpoint Directory exists!
+[2022-08-03 05:36:20,910 main.py]: Epoch [10/50],  epoch_train_loss: 0.5574, epoch_val_loss: 0.5998, Train_Acc: 0.7774,  Val_Acc: 0.7107, Val_F1: 0.7107, Val_Pre: 0.7107, Val_Rec: 0.7109.
+[2022-08-03 05:36:55,133 main.py]: Epoch [11/50],  epoch_train_loss: 0.5523, epoch_val_loss: 0.6005, Train_Acc: 0.7805,  Val_Acc: 0.7100, Val_F1: 0.7099, Val_Pre: 0.7113, Val_Rec: 0.7109.
+Checkpoint Directory exists!
+[2022-08-03 05:37:17,218 main.py]: Epoch [12/50],  epoch_train_loss: 0.5468, epoch_val_loss: 0.5915, Train_Acc: 0.7839,  Val_Acc: 0.7183, Val_F1: 0.7183, Val_Pre: 0.7185, Val_Rec: 0.7186.
+Checkpoint Directory exists!
+[2022-08-03 05:37:50,599 main.py]: Epoch [13/50],  epoch_train_loss: 0.5414, epoch_val_loss: 0.5862, Train_Acc: 0.7946,  Val_Acc: 0.7235, Val_F1: 0.7234, Val_Pre: 0.7234, Val_Rec: 0.7236.
+[2022-08-03 05:38:24,322 main.py]: Epoch [14/50],  epoch_train_loss: 0.5366, epoch_val_loss: 0.5788, Train_Acc: 0.7965,  Val_Acc: 0.7213, Val_F1: 0.7205, Val_Pre: 0.7215, Val_Rec: 0.7204.
+Checkpoint Directory exists!
+[2022-08-03 05:38:46,498 main.py]: Epoch [15/50],  epoch_train_loss: 0.5348, epoch_val_loss: 0.5816, Train_Acc: 0.7898,  Val_Acc: 0.7333, Val_F1: 0.7332, Val_Pre: 0.7348, Val_Rec: 0.7342.
+Checkpoint Directory exists!
+[2022-08-03 05:39:20,642 main.py]: Epoch [16/50],  epoch_train_loss: 0.5265, epoch_val_loss: 0.5745, Train_Acc: 0.8007,  Val_Acc: 0.7348, Val_F1: 0.7347, Val_Pre: 0.7347, Val_Rec: 0.7348.
+Checkpoint Directory exists!
+[2022-08-03 05:39:53,998 main.py]: Epoch [17/50],  epoch_train_loss: 0.5266, epoch_val_loss: 0.5709, Train_Acc: 0.8042,  Val_Acc: 0.7415, Val_F1: 0.7415, Val_Pre: 0.7414, Val_Rec: 0.7416.
+[2022-08-03 05:40:26,235 main.py]: Epoch [18/50],  epoch_train_loss: 0.5205, epoch_val_loss: 0.5649, Train_Acc: 0.8099,  Val_Acc: 0.7415, Val_F1: 0.7408, Val_Pre: 0.7421, Val_Rec: 0.7406.
+Checkpoint Directory exists!
+[2022-08-03 05:40:48,434 main.py]: Epoch [19/50],  epoch_train_loss: 0.5188, epoch_val_loss: 0.5641, Train_Acc: 0.8093,  Val_Acc: 0.7438, Val_F1: 0.7436, Val_Pre: 0.7436, Val_Rec: 0.7436.
+Checkpoint Directory exists!
+[2022-08-03 05:41:21,723 main.py]: Epoch [20/50],  epoch_train_loss: 0.5153, epoch_val_loss: 0.5597, Train_Acc: 0.8137,  Val_Acc: 0.7468, Val_F1: 0.7463, Val_Pre: 0.7469, Val_Rec: 0.7462.
+[2022-08-03 05:41:55,092 main.py]: Epoch [21/50],  epoch_train_loss: 0.5138, epoch_val_loss: 0.5627, Train_Acc: 0.8101,  Val_Acc: 0.7468, Val_F1: 0.7468, Val_Pre: 0.7477, Val_Rec: 0.7475.
+Checkpoint Directory exists!
+[2022-08-03 05:42:17,311 main.py]: Epoch [22/50],  epoch_train_loss: 0.5077, epoch_val_loss: 0.5602, Train_Acc: 0.8187,  Val_Acc: 0.7551, Val_F1: 0.7551, Val_Pre: 0.7560, Val_Rec: 0.7558.
+[2022-08-03 05:42:50,706 main.py]: Epoch [23/50],  epoch_train_loss: 0.5086, epoch_val_loss: 0.5608, Train_Acc: 0.8172,  Val_Acc: 0.7543, Val_F1: 0.7542, Val_Pre: 0.7561, Val_Rec: 0.7553.
+[2022-08-03 05:43:12,890 main.py]: Epoch [24/50],  epoch_train_loss: 0.5062, epoch_val_loss: 0.5642, Train_Acc: 0.8217,  Val_Acc: 0.7528, Val_F1: 0.7523, Val_Pre: 0.7576, Val_Rec: 0.7545.
+[2022-08-03 05:43:35,099 main.py]: Epoch [25/50],  epoch_train_loss: 0.5035, epoch_val_loss: 0.5604, Train_Acc: 0.8198,  Val_Acc: 0.7536, Val_F1: 0.7533, Val_Pre: 0.7571, Val_Rec: 0.7550.
+[2022-08-03 05:43:57,310 main.py]: Epoch [26/50],  epoch_train_loss: 0.4999, epoch_val_loss: 0.5667, Train_Acc: 0.8290,  Val_Acc: 0.7483, Val_F1: 0.7470, Val_Pre: 0.7581, Val_Rec: 0.7507.
+[2022-08-03 05:44:19,526 main.py]: Epoch [27/50],  epoch_train_loss: 0.5002, epoch_val_loss: 0.5608, Train_Acc: 0.8277,  Val_Acc: 0.7521, Val_F1: 0.7514, Val_Pre: 0.7581, Val_Rec: 0.7540.
+[2022-08-03 05:44:41,733 main.py]: Epoch [28/50],  epoch_train_loss: 0.4965, epoch_val_loss: 0.5607, Train_Acc: 0.8298,  Val_Acc: 0.7543, Val_F1: 0.7535, Val_Pre: 0.7613, Val_Rec: 0.7563.
+[2022-08-03 05:45:03,961 main.py]: Epoch [29/50],  epoch_train_loss: 0.4958, epoch_val_loss: 0.5559, Train_Acc: 0.8336,  Val_Acc: 0.7551, Val_F1: 0.7547, Val_Pre: 0.7592, Val_Rec: 0.7566.
+Checkpoint Directory exists!
+[2022-08-03 05:45:26,142 main.py]: Epoch [30/50],  epoch_train_loss: 0.4935, epoch_val_loss: 0.5527, Train_Acc: 0.8351,  Val_Acc: 0.7626, Val_F1: 0.7623, Val_Pre: 0.7666, Val_Rec: 0.7641.
+Checkpoint Directory exists!
+[2022-08-03 05:45:59,632 main.py]: Epoch [31/50],  epoch_train_loss: 0.4923, epoch_val_loss: 0.5420, Train_Acc: 0.8357,  Val_Acc: 0.7701, Val_F1: 0.7698, Val_Pre: 0.7700, Val_Rec: 0.7697.
+[2022-08-03 05:46:32,860 main.py]: Epoch [32/50],  epoch_train_loss: 0.4895, epoch_val_loss: 0.5489, Train_Acc: 0.8382,  Val_Acc: 0.7648, Val_F1: 0.7647, Val_Pre: 0.7671, Val_Rec: 0.7660.
+[2022-08-03 05:46:54,998 main.py]: Epoch [33/50],  epoch_train_loss: 0.4873, epoch_val_loss: 0.5501, Train_Acc: 0.8437,  Val_Acc: 0.7648, Val_F1: 0.7645, Val_Pre: 0.7694, Val_Rec: 0.7664.
+[2022-08-03 05:47:17,223 main.py]: Epoch [34/50],  epoch_train_loss: 0.4863, epoch_val_loss: 0.5460, Train_Acc: 0.8391,  Val_Acc: 0.7633, Val_F1: 0.7633, Val_Pre: 0.7650, Val_Rec: 0.7643.
+Checkpoint Directory exists!
+[2022-08-03 05:47:39,398 main.py]: Epoch [35/50],  epoch_train_loss: 0.4845, epoch_val_loss: 0.5421, Train_Acc: 0.8395,  Val_Acc: 0.7708, Val_F1: 0.7708, Val_Pre: 0.7718, Val_Rec: 0.7715.
+Checkpoint Directory exists!
+[2022-08-03 05:48:12,648 main.py]: Epoch [36/50],  epoch_train_loss: 0.4851, epoch_val_loss: 0.5407, Train_Acc: 0.8428,  Val_Acc: 0.7746, Val_F1: 0.7745, Val_Pre: 0.7745, Val_Rec: 0.7747.
+[2022-08-03 05:48:45,309 main.py]: Epoch [37/50],  epoch_train_loss: 0.4819, epoch_val_loss: 0.5583, Train_Acc: 0.8473,  Val_Acc: 0.7551, Val_F1: 0.7534, Val_Pre: 0.7672, Val_Rec: 0.7577.
+[2022-08-03 05:49:07,485 main.py]: Epoch [38/50],  epoch_train_loss: 0.4824, epoch_val_loss: 0.5577, Train_Acc: 0.8420,  Val_Acc: 0.7573, Val_F1: 0.7557, Val_Pre: 0.7697, Val_Rec: 0.7600.
+[2022-08-03 05:49:29,685 main.py]: Epoch [39/50],  epoch_train_loss: 0.4769, epoch_val_loss: 0.5479, Train_Acc: 0.8527,  Val_Acc: 0.7648, Val_F1: 0.7643, Val_Pre: 0.7705, Val_Rec: 0.7666.
+Checkpoint Directory exists!
+[2022-08-03 05:49:52,012 main.py]: Epoch [40/50],  epoch_train_loss: 0.4739, epoch_val_loss: 0.5385, Train_Acc: 0.8550,  Val_Acc: 0.7769, Val_F1: 0.7768, Val_Pre: 0.7784, Val_Rec: 0.7778.
+[2022-08-03 05:50:26,194 main.py]: Epoch [41/50],  epoch_train_loss: 0.4732, epoch_val_loss: 0.5628, Train_Acc: 0.8533,  Val_Acc: 0.7528, Val_F1: 0.7507, Val_Pre: 0.7677, Val_Rec: 0.7558.
+[2022-08-03 05:50:48,393 main.py]: Epoch [42/50],  epoch_train_loss: 0.4736, epoch_val_loss: 0.5485, Train_Acc: 0.8493,  Val_Acc: 0.7648, Val_F1: 0.7641, Val_Pre: 0.7715, Val_Rec: 0.7668.
+[2022-08-03 05:51:10,782 main.py]: Epoch [43/50],  epoch_train_loss: 0.4742, epoch_val_loss: 0.5494, Train_Acc: 0.8546,  Val_Acc: 0.7648, Val_F1: 0.7639, Val_Pre: 0.7729, Val_Rec: 0.7670.
+Checkpoint Directory exists!
+[2022-08-03 05:51:32,959 main.py]: Epoch [44/50],  epoch_train_loss: 0.4722, epoch_val_loss: 0.5359, Train_Acc: 0.8542,  Val_Acc: 0.7821, Val_F1: 0.7821, Val_Pre: 0.7830, Val_Rec: 0.7828.
+[2022-08-03 05:52:06,269 main.py]: Epoch [45/50],  epoch_train_loss: 0.4708, epoch_val_loss: 0.5288, Train_Acc: 0.8573,  Val_Acc: 0.7761, Val_F1: 0.7758, Val_Pre: 0.7761, Val_Rec: 0.7756.
+[2022-08-03 05:52:28,451 main.py]: Epoch [46/50],  epoch_train_loss: 0.4717, epoch_val_loss: 0.5363, Train_Acc: 0.8559,  Val_Acc: 0.7821, Val_F1: 0.7821, Val_Pre: 0.7837, Val_Rec: 0.7830.
+[2022-08-03 05:52:50,714 main.py]: Epoch [47/50],  epoch_train_loss: 0.4662, epoch_val_loss: 0.5340, Train_Acc: 0.8626,  Val_Acc: 0.7806, Val_F1: 0.7806, Val_Pre: 0.7812, Val_Rec: 0.7812.
+Checkpoint Directory exists!
+[2022-08-03 05:53:12,998 main.py]: Epoch [48/50],  epoch_train_loss: 0.4679, epoch_val_loss: 0.5362, Train_Acc: 0.8567,  Val_Acc: 0.7836, Val_F1: 0.7835, Val_Pre: 0.7858, Val_Rec: 0.7847.
+[2022-08-03 05:53:46,860 main.py]: Epoch [49/50],  epoch_train_loss: 0.4634, epoch_val_loss: 0.5455, Train_Acc: 0.8642,  Val_Acc: 0.7686, Val_F1: 0.7679, Val_Pre: 0.7752, Val_Rec: 0.7705.
+[2022-08-03 05:54:09,116 main.py]: Epoch [50/50],  epoch_train_loss: 0.4622, epoch_val_loss: 0.5399, Train_Acc: 0.8634,  Val_Acc: 0.7769, Val_F1: 0.7766, Val_Pre: 0.7809, Val_Rec: 0.7783.
+[2022-08-03 05:54:09,116 main.py]: start testing model
+[2022-08-03 05:54:09,710 configuration_utils.py]: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/config.json from cache at /home/v-zuangao/.cache/torch/transformers/3227a4c62d38cb0f891e7ccb8fc0b7b7dbd873889b3688c2e95834fb6f6109be.573c56a39f56f50b7bc6e9803d92871c74059419e37e87c5b14d49b1546b0703
+[2022-08-03 05:54:09,710 configuration_utils.py]: Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "directionality": "bidi",
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+[2022-08-03 05:54:09,820 modeling_utils.py]: loading weights file https://cdn.huggingface.co/hfl/chinese-roberta-wwm-ext/pytorch_model.bin from cache at /home/v-zuangao/.cache/torch/transformers/47d2326d47246cef3121d70d592c0391a4ed594b04ce3dea8bd47edd37e20370.6ac27309c356295f0e005c6029fce503ec6a32853911ebf79f8bddd8dd10edad
+[2022-08-03 05:54:16,159 main.py]: showing the cache model metrics
+[2022-08-03 05:54:16,159 main.py]: Classification Acc: 0.7836, F1: 0.7835, Precision: 0.7858, Recall: 0.7847, AUC-ROC: 0.8569
+[2022-08-03 05:54:16,162 main.py]: Classification report:
+              precision    recall  f1-score   support
+           0       0.75      0.83      0.79       648
+           1       0.82      0.74      0.78       683
+    accuracy                           0.78      1331
+   macro avg       0.79      0.78      0.78      1331
+weighted avg       0.79      0.78      0.78      1331
+[2022-08-03 05:54:16,163 main.py]: Classification confusion matrix:
+[[535 113]
+ [175 508]]

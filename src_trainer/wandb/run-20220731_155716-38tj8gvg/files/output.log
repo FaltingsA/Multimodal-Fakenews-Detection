@@ -1,0 +1,103 @@
+[2022-07-31 15:57:22,274 main.py: loading data
+[2022-07-31 15:57:22,275 tokenization_utils.py: Model name 'hfl/chinese-roberta-wwm-ext' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, TurkuNLP/bert-base-finnish-cased-v1, TurkuNLP/bert-base-finnish-uncased-v1, wietsedv/bert-base-dutch-cased). Assuming 'hfl/chinese-roberta-wwm-ext' is a path, a model identifier, or url to a directory containing tokenizer files.
+[2022-07-31 15:57:23,567 tokenization_utils.py: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/vocab.txt from cache at /home/v-zuangao/.cache/torch/transformers/5593eb652e3fb9a17042385245a61389ce6f0c8a25e167519477d7efbdf2459a.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+[2022-07-31 15:57:23,568 tokenization_utils.py: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/added_tokens.json from cache at /home/v-zuangao/.cache/torch/transformers/23740a16768d945f44a24590dc8f5e572773b1b2868c5e58f7ff4fae2a721c49.3889713104075cfee9e96090bcdd0dc753733b3db9da20d1dd8b2cd1030536a2
+[2022-07-31 15:57:23,568 tokenization_utils.py: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/special_tokens_map.json from cache at /home/v-zuangao/.cache/torch/transformers/6f13f9fe28f96dd7be36b84708332115ef90b3b310918502c13a8f719a225de2.275045728fbf41c11d3dae08b8742c054377e18d92cc7b72b6351152a99b64e4
+[2022-07-31 15:57:23,568 tokenization_utils.py: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/tokenizer_config.json from cache at /home/v-zuangao/.cache/torch/transformers/5bb5761fdb6c8f42bf7705c27c48cffd8b40afa8278fa035bc81bf288f108af9.1ade4e0ac224a06d83f2cb9821a6656b6b59974d6552e8c728f2657e4ba445d9
+Building prefix dict from the default dictionary ...
+[2022-07-31 15:59:30,791 __init__.py: Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+[2022-07-31 15:59:30,792 __init__.py: Loading model from cache /tmp/jieba.cache
+Loading model cost 0.479 seconds.
+[2022-07-31 15:59:31,271 __init__.py: Loading model cost 0.479 seconds.
+Prefix dict has been built successfully.
+[2022-07-31 15:59:31,271 __init__.py: Prefix dict has been built successfully.
+TEXT: 4766, Image: 4766, label: 4766, Mask: 4766
+TEXT: 1331, Image: 1331, label: 1331, Mask: 1331
+[2022-07-31 16:02:19,232 main.py: Train data_length => TEXT: 4766, Image: 4766, label: 4766, Mask: 4766
+[2022-07-31 16:02:19,289 main.py: Test data_length => TEXT: 1331, Image: 1331, label: 1331, Mask: 1331
+[2022-07-31 16:02:19,289 main.py: building model
+[2022-07-31 16:02:20,414 configuration_utils.py: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/config.json from cache at /home/v-zuangao/.cache/torch/transformers/3227a4c62d38cb0f891e7ccb8fc0b7b7dbd873889b3688c2e95834fb6f6109be.573c56a39f56f50b7bc6e9803d92871c74059419e37e87c5b14d49b1546b0703
+[2022-07-31 16:02:20,415 configuration_utils.py: Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "directionality": "bidi",
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+[2022-07-31 16:02:20,517 modeling_utils.py: loading weights file https://cdn.huggingface.co/hfl/chinese-roberta-wwm-ext/pytorch_model.bin from cache at /home/v-zuangao/.cache/torch/transformers/47d2326d47246cef3121d70d592c0391a4ed594b04ce3dea8bd47edd37e20370.6ac27309c356295f0e005c6029fce503ec6a32853911ebf79f8bddd8dd10edad
+[2022-07-31 16:02:21,765 main.py: expType: mulT, train in expCode: mulT_epoch50, batch_size 256, epoch = 50, lr = 0.001
+[2022-07-31 16:02:22,594 main.py: start training model
+[2022-07-31 16:03:00,405 main.py: Epoch [1/50],  epoch_train_loss: 0.5800, epoch_val_loss: 0.4864, Train_Acc: 0.7081,  Val_Acc: 0.8137, Val_F1: 0.8119, Val_Pre: 0.8332, Val_Rec: 0.8168.
+[2022-07-31 16:03:38,928 main.py: Epoch [2/50],  epoch_train_loss: 0.4460, epoch_val_loss: 0.4569, Train_Acc: 0.8609,  Val_Acc: 0.8452, Val_F1: 0.8446, Val_Pre: 0.8557, Val_Rec: 0.8475.
+[2022-07-31 16:04:17,873 main.py: Epoch [3/50],  epoch_train_loss: 0.4068, epoch_val_loss: 0.4961, Train_Acc: 0.9054,  Val_Acc: 0.8242, Val_F1: 0.8218, Val_Pre: 0.8506, Val_Rec: 0.8278.
+[2022-07-31 16:04:55,688 main.py: Epoch [4/50],  epoch_train_loss: 0.3994, epoch_val_loss: 0.4126, Train_Acc: 0.9115,  Val_Acc: 0.8986, Val_F1: 0.8986, Val_Pre: 0.9002, Val_Rec: 0.8995.
+[2022-07-31 16:05:34,865 main.py: Epoch [5/50],  epoch_train_loss: 0.3802, epoch_val_loss: 0.4288, Train_Acc: 0.9308,  Val_Acc: 0.8896, Val_F1: 0.8895, Val_Pre: 0.8934, Val_Rec: 0.8909.
+[2022-07-31 16:06:13,062 main.py: Epoch [6/50],  epoch_train_loss: 0.3786, epoch_val_loss: 0.4197, Train_Acc: 0.9337,  Val_Acc: 0.8948, Val_F1: 0.8948, Val_Pre: 0.8957, Val_Rec: 0.8955.
+[2022-07-31 16:06:51,232 main.py: Epoch [7/50],  epoch_train_loss: 0.3955, epoch_val_loss: 0.5209, Train_Acc: 0.9157,  Val_Acc: 0.7874, Val_F1: 0.7815, Val_Pre: 0.8338, Val_Rec: 0.7922.
+[2022-07-31 16:07:29,480 main.py: Epoch [8/50],  epoch_train_loss: 0.3880, epoch_val_loss: 0.4345, Train_Acc: 0.9224,  Val_Acc: 0.8768, Val_F1: 0.8766, Val_Pre: 0.8770, Val_Rec: 0.8764.
+[2022-07-31 16:08:07,809 main.py: Epoch [9/50],  epoch_train_loss: 0.3840, epoch_val_loss: 0.4427, Train_Acc: 0.9261,  Val_Acc: 0.8738, Val_F1: 0.8738, Val_Pre: 0.8753, Val_Rec: 0.8747.
+[2022-07-31 16:08:46,187 main.py: Epoch [10/50],  epoch_train_loss: 0.3789, epoch_val_loss: 0.4317, Train_Acc: 0.9310,  Val_Acc: 0.8745, Val_F1: 0.8744, Val_Pre: 0.8795, Val_Rec: 0.8761.
+[2022-07-31 16:09:24,555 main.py: Epoch [11/50],  epoch_train_loss: 0.3958, epoch_val_loss: 0.4254, Train_Acc: 0.9152,  Val_Acc: 0.8768, Val_F1: 0.8767, Val_Pre: 0.8804, Val_Rec: 0.8781.
+[2022-07-31 16:10:03,060 main.py: Epoch [12/50],  epoch_train_loss: 0.3927, epoch_val_loss: 0.4369, Train_Acc: 0.9175,  Val_Acc: 0.8670, Val_F1: 0.8665, Val_Pre: 0.8694, Val_Rec: 0.8660.
+Traceback (most recent call last):
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/v-zuangao/.vscode-server/extensions/ms-python.python-2022.8.1/pythonFiles/lib/python/debugpy/__main__.py", line 45, in <module>
+    cli.main()
+  File "/home/v-zuangao/.vscode-server/extensions/ms-python.python-2022.8.1/pythonFiles/lib/python/debugpy/../debugpy/server/cli.py", line 444, in main
+    run()
+  File "/home/v-zuangao/.vscode-server/extensions/ms-python.python-2022.8.1/pythonFiles/lib/python/debugpy/../debugpy/server/cli.py", line 285, in run_file
+    runpy.run_path(target_as_str, run_name=compat.force_str("__main__"))
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/anaconda/envs/fakenews/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/main.py", line 298, in <module>
+    main(args)
+  File "/home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/main.py", line 221, in main
+    validate_outputs = model(validate_image, validate_text, validate_types, validate_mask)
+  File "/anaconda/envs/fakenews/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/model.py", line 118, in forward
+    l_v, v_l = self.mult(hs_out,image_features) # return l,v
+  File "/anaconda/envs/fakenews/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/modules/model_cross.py", line 117, in forward
+    h_l_with_vs = self.trans_l_with_v(proj_x_l, proj_x_v, proj_x_v)    # Dimension (L, N, d_l)
+  File "/anaconda/envs/fakenews/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/modules/transformer.py", line 65, in forward
+    x += self.embed_positions(x_in.transpose(0, 1)[:, :, 0]).transpose(0, 1)   # Add positional embedding
+  File "/anaconda/envs/fakenews/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/modules/position_embedding.py", line 75, in forward
+    positions = make_positions(input, self.padding_idx, self.left_pad)
+  File "/home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/modules/position_embedding.py", line 27, in make_positions
+    return new_tensor.masked_scatter_(mask, positions[mask]).long()
+KeyboardInterrupt

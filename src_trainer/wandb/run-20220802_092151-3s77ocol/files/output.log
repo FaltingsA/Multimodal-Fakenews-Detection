@@ -1,0 +1,83 @@
+[2022-08-02 09:21:57,618 main.py]: loading data
+[2022-08-02 09:21:58,294 tokenization_utils.py]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-base-vocab.json from cache at /home/v-zuangao/.cache/torch/transformers/d0c5776499adc1ded22493fae699da0971c1ee4c2587111707a4d177d20257a2.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
+[2022-08-02 09:21:58,294 tokenization_utils.py]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-base-merges.txt from cache at /home/v-zuangao/.cache/torch/transformers/b35e7cd126cd4229a746b5d5c29a749e8e84438b14bcdb575950584fe33207e8.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
+TEXT: 14129, Image: 14129, label: 14129, Mask: 14129
+TEXT: 1380, Image: 1380, label: 1380, Mask: 1380
+[2022-08-02 09:22:23,635 main.py]: Train data_length => TEXT: 14129, Image: 14129, label: 14129, Mask: 14129
+[2022-08-02 09:22:23,694 main.py]: Test data_length => TEXT: 1380, Image: 1380, label: 1380, Mask: 1380
+[2022-08-02 09:22:23,695 main.py]: building model
+[2022-08-02 09:22:24,402 configuration_utils.py]: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-base-config.json from cache at /home/v-zuangao/.cache/torch/transformers/e1a2a406b5a05063c31f4dfdee7608986ba7c6393f7f79db5e69dcd197208534.117c81977c5979de8c088352e74ec6e70f5c66096c28b61d3c50101609b39690
+[2022-08-02 09:22:24,403 configuration_utils.py]: Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}
+[2022-08-02 09:22:24,508 modeling_utils.py]: loading weights file https://cdn.huggingface.co/roberta-base-pytorch_model.bin from cache at /home/v-zuangao/.cache/torch/transformers/80b4a484eddeb259bec2f06a6f2f05d90934111628e0e1c09a33bd4a121358e1.49b88ba7ec2c26a7558dda98ca3884c3b80fa31cf43a1b1f23aef3ff81ba344e
+[2022-08-02 09:22:26,856 main.py]: expType: all, train in expCode: all_epoch50_debug, batch_size 256, epoch = 2, lr = 0.0001
+[2022-08-02 09:22:27,680 main.py]: start training model
+Checkpoint Directory exists!
+[2022-08-02 09:24:02,244 main.py]: Epoch [1/2],  epoch_train_loss: 0.5112, epoch_val_loss: 0.4449, Train_Acc: 0.8473,  Val_Acc: 0.8638, Val_F1: 0.7988, Val_Pre: 0.9180, Val_Rec: 0.7604.
+Checkpoint Directory exists!
+[2022-08-02 09:25:40,276 main.py]: Epoch [2/2],  epoch_train_loss: 0.3815, epoch_val_loss: 0.4159, Train_Acc: 0.9402,  Val_Acc: 0.8652, Val_F1: 0.8047, Val_Pre: 0.9051, Val_Rec: 0.7683.
+[2022-08-02 09:25:58,270 main.py]: start testing model
+[2022-08-02 09:25:59,607 configuration_utils.py]: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-base-config.json from cache at /home/v-zuangao/.cache/torch/transformers/e1a2a406b5a05063c31f4dfdee7608986ba7c6393f7f79db5e69dcd197208534.117c81977c5979de8c088352e74ec6e70f5c66096c28b61d3c50101609b39690
+[2022-08-02 09:25:59,608 configuration_utils.py]: Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}
+[2022-08-02 09:25:59,668 modeling_utils.py]: loading weights file https://cdn.huggingface.co/roberta-base-pytorch_model.bin from cache at /home/v-zuangao/.cache/torch/transformers/80b4a484eddeb259bec2f06a6f2f05d90934111628e0e1c09a33bd4a121358e1.49b88ba7ec2c26a7558dda98ca3884c3b80fa31cf43a1b1f23aef3ff81ba344e
+[2022-08-02 09:26:02,771 configuration_utils.py]: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-base-config.json from cache at /home/v-zuangao/.cache/torch/transformers/e1a2a406b5a05063c31f4dfdee7608986ba7c6393f7f79db5e69dcd197208534.117c81977c5979de8c088352e74ec6e70f5c66096c28b61d3c50101609b39690
+[2022-08-02 09:26:02,772 configuration_utils.py]: Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}

@@ -1,0 +1,843 @@
+[2022-07-31 09:51:19,229 main.py:68 INFO]: loading data
+[2022-07-31 09:51:19,230 tokenization_utils.py:938 INFO]: Model name 'hfl/chinese-roberta-wwm-ext' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, TurkuNLP/bert-base-finnish-cased-v1, TurkuNLP/bert-base-finnish-uncased-v1, wietsedv/bert-base-dutch-cased). Assuming 'hfl/chinese-roberta-wwm-ext' is a path, a model identifier, or url to a directory containing tokenizer files.
+[2022-07-31 09:51:20,522 tokenization_utils.py:1022 INFO]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/vocab.txt from cache at /home/v-zuangao/.cache/torch/transformers/5593eb652e3fb9a17042385245a61389ce6f0c8a25e167519477d7efbdf2459a.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+[2022-07-31 09:51:20,523 tokenization_utils.py:1022 INFO]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/added_tokens.json from cache at /home/v-zuangao/.cache/torch/transformers/23740a16768d945f44a24590dc8f5e572773b1b2868c5e58f7ff4fae2a721c49.3889713104075cfee9e96090bcdd0dc753733b3db9da20d1dd8b2cd1030536a2
+[2022-07-31 09:51:20,523 tokenization_utils.py:1022 INFO]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/special_tokens_map.json from cache at /home/v-zuangao/.cache/torch/transformers/6f13f9fe28f96dd7be36b84708332115ef90b3b310918502c13a8f719a225de2.275045728fbf41c11d3dae08b8742c054377e18d92cc7b72b6351152a99b64e4
+[2022-07-31 09:51:20,523 tokenization_utils.py:1022 INFO]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/tokenizer_config.json from cache at /home/v-zuangao/.cache/torch/transformers/5bb5761fdb6c8f42bf7705c27c48cffd8b40afa8278fa035bc81bf288f108af9.1ade4e0ac224a06d83f2cb9821a6656b6b59974d6552e8c728f2657e4ba445d9
+Building prefix dict from the default dictionary ...
+[2022-07-31 09:53:29,714 __init__.py:113 DEBUG]: Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+[2022-07-31 09:53:29,715 __init__.py:133 DEBUG]: Loading model from cache /tmp/jieba.cache
+Loading model cost 0.642 seconds.
+[2022-07-31 09:53:30,357 __init__.py:165 DEBUG]: Loading model cost 0.642 seconds.
+Prefix dict has been built successfully.
+[2022-07-31 09:53:30,357 __init__.py:166 DEBUG]: Prefix dict has been built successfully.
+TEXT: 4766, Image: 4766, label: 4766, Mask: 4766
+TEXT: 1331, Image: 1331, label: 1331, Mask: 1331
+[2022-07-31 09:56:19,141 main.py:75 INFO]: Train data_length => TEXT: 4766, Image: 4766, label: 4766, Mask: 4766
+[2022-07-31 09:56:19,196 main.py:78 INFO]: Test data_length => TEXT: 1331, Image: 1331, label: 1331, Mask: 1331
+[2022-07-31 09:56:19,197 main.py:90 INFO]: building model
+[2022-07-31 09:56:20,320 configuration_utils.py:265 INFO]: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/config.json from cache at /home/v-zuangao/.cache/torch/transformers/3227a4c62d38cb0f891e7ccb8fc0b7b7dbd873889b3688c2e95834fb6f6109be.573c56a39f56f50b7bc6e9803d92871c74059419e37e87c5b14d49b1546b0703
+[2022-07-31 09:56:20,321 configuration_utils.py:301 INFO]: Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "directionality": "bidi",
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+[2022-07-31 09:56:20,415 modeling_utils.py:650 INFO]: loading weights file https://cdn.huggingface.co/hfl/chinese-roberta-wwm-ext/pytorch_model.bin from cache at /home/v-zuangao/.cache/torch/transformers/47d2326d47246cef3121d70d592c0391a4ed594b04ce3dea8bd47edd37e20370.6ac27309c356295f0e005c6029fce503ec6a32853911ebf79f8bddd8dd10edad
+[2022-07-31 09:56:21,685 main.py:92 INFO]: Multimodal_Net(
+  (dropout): Dropout(p=0.5, inplace=False)
+  (resnet): VGG(
+    (features): Sequential(
+      (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): ReLU(inplace=True)
+      (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): ReLU(inplace=True)
+      (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (6): ReLU(inplace=True)
+      (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (8): ReLU(inplace=True)
+      (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (11): ReLU(inplace=True)
+      (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (13): ReLU(inplace=True)
+      (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (15): ReLU(inplace=True)
+      (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (17): ReLU(inplace=True)
+      (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (20): ReLU(inplace=True)
+      (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (22): ReLU(inplace=True)
+      (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (24): ReLU(inplace=True)
+      (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (26): ReLU(inplace=True)
+      (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (29): ReLU(inplace=True)
+      (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (31): ReLU(inplace=True)
+      (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (33): ReLU(inplace=True)
+      (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (35): ReLU(inplace=True)
+      (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (avgpool): AdaptiveAvgPool2d(output_size=(7, 7))
+    (classifier): Sequential(
+      (0): Linear(in_features=25088, out_features=4096, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.5, inplace=False)
+      (3): Linear(in_features=4096, out_features=4096, bias=True)
+      (4): ReLU(inplace=True)
+      (5): Dropout(p=0.5, inplace=False)
+      (6): Linear(in_features=4096, out_features=1000, bias=True)
+    )
+  )
+  (backbone): Sequential(
+    (0): Sequential(
+      (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): ReLU(inplace=True)
+      (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): ReLU(inplace=True)
+      (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (6): ReLU(inplace=True)
+      (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (8): ReLU(inplace=True)
+      (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (11): ReLU(inplace=True)
+      (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (13): ReLU(inplace=True)
+      (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (15): ReLU(inplace=True)
+      (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (17): ReLU(inplace=True)
+      (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (20): ReLU(inplace=True)
+      (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (22): ReLU(inplace=True)
+      (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (24): ReLU(inplace=True)
+      (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (26): ReLU(inplace=True)
+      (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (29): ReLU(inplace=True)
+      (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (31): ReLU(inplace=True)
+      (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (33): ReLU(inplace=True)
+      (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (35): ReLU(inplace=True)
+      (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+  )
+  (roberta): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embedding(21128, 768, padding_idx=1)
+      (position_embeddings): Embedding(512, 768)
+      (token_type_embeddings): Embedding(2, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): BertEncoder(
+      (layer): ModuleList(
+        (0): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (1): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (2): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (3): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (4): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (5): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (6): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (7): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (8): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (9): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (10): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (11): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): BertPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (fc_resnet): Linear(in_features=1000, out_features=32, bias=True)
+  (fc_roberta): Linear(in_features=768, out_features=32, bias=True)
+  (mult): MULTModel(
+    (proj_l): Conv1d(768, 256, kernel_size=(1,), stride=(1,), bias=False)
+    (proj_v): Conv1d(2048, 256, kernel_size=(1,), stride=(1,), bias=False)
+    (trans_l_with_v): TransformerEncoder(
+      (embed_positions): SinusoidalPositionalEmbedding()
+      (layers): ModuleList(
+        (0): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (1): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (2): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (3): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (4): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (trans_v_with_l): TransformerEncoder(
+      (embed_positions): SinusoidalPositionalEmbedding()
+      (layers): ModuleList(
+        (0): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (1): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (2): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (3): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (4): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (trans_l_mem): TransformerEncoder(
+      (embed_positions): SinusoidalPositionalEmbedding()
+      (layers): ModuleList(
+        (0): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (1): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (2): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (3): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (4): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (trans_v_mem): TransformerEncoder(
+      (embed_positions): SinusoidalPositionalEmbedding()
+      (layers): ModuleList(
+        (0): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (1): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (2): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (3): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (4): TransformerEncoderLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (fc1): Linear(in_features=256, out_features=1024, bias=True)
+          (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          (layer_norms): ModuleList(
+            (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (proj1): Linear(in_features=512, out_features=512, bias=True)
+    (proj2): Linear(in_features=512, out_features=512, bias=True)
+    (proj3): Linear(in_features=256, out_features=32, bias=True)
+    (out_layer): Linear(in_features=512, out_features=32, bias=True)
+  )
+  (embracenet): EmbraceNet(
+    (docking_0): Linear(in_features=32, out_features=64, bias=True)
+    (docking_1): Linear(in_features=32, out_features=64, bias=True)
+  )
+  (class_classifier): Sequential(
+    (c_fc1): Linear(in_features=32, out_features=2, bias=True)
+    (c_softmax): Softmax(dim=1)
+  )
+)
+[2022-07-31 09:56:21,696 main.py:94 INFO]: expType: vis, train in expCode: vis_epoch100, batch_size 256, epoch = 100, lr = 0.0001
+[2022-07-31 09:56:22,517 main.py:114 INFO]: start training model
+[2022-07-31 09:56:28,616 main.py:190 INFO]: Epoch [1/100],  Loss: 0.6903, Class Loss: 0.6903, Train_Acc: 0.5499,  Validate_Acc: 0.5363.
+[2022-07-31 09:56:34,362 main.py:190 INFO]: Epoch [2/100],  Loss: 0.6688, Class Loss: 0.6688, Train_Acc: 0.5991,  Validate_Acc: 0.5532.
+[2022-07-31 09:56:40,128 main.py:190 INFO]: Epoch [3/100],  Loss: 0.6566, Class Loss: 0.6566, Train_Acc: 0.6171,  Validate_Acc: 0.5584.
+[2022-07-31 09:56:45,871 main.py:190 INFO]: Epoch [4/100],  Loss: 0.6477, Class Loss: 0.6477, Train_Acc: 0.6252,  Validate_Acc: 0.5616.
+[2022-07-31 09:56:51,629 main.py:190 INFO]: Epoch [5/100],  Loss: 0.6443, Class Loss: 0.6443, Train_Acc: 0.6353,  Validate_Acc: 0.5779.
+[2022-07-31 09:56:57,411 main.py:190 INFO]: Epoch [6/100],  Loss: 0.6390, Class Loss: 0.6390, Train_Acc: 0.6423,  Validate_Acc: 0.5779.
+[2022-07-31 09:57:02,144 main.py:190 INFO]: Epoch [7/100],  Loss: 0.6348, Class Loss: 0.6348, Train_Acc: 0.6491,  Validate_Acc: 0.5766.
+[2022-07-31 09:57:06,978 main.py:190 INFO]: Epoch [8/100],  Loss: 0.6349, Class Loss: 0.6349, Train_Acc: 0.6436,  Validate_Acc: 0.5929.
+[2022-07-31 09:57:12,766 main.py:190 INFO]: Epoch [9/100],  Loss: 0.6319, Class Loss: 0.6319, Train_Acc: 0.6449,  Validate_Acc: 0.5857.
+[2022-07-31 09:57:17,470 main.py:190 INFO]: Epoch [10/100],  Loss: 0.6296, Class Loss: 0.6296, Train_Acc: 0.6487,  Validate_Acc: 0.5916.
+[2022-07-31 09:57:22,184 main.py:190 INFO]: Epoch [11/100],  Loss: 0.6318, Class Loss: 0.6318, Train_Acc: 0.6496,  Validate_Acc: 0.6033.
+[2022-07-31 09:57:27,977 main.py:190 INFO]: Epoch [12/100],  Loss: 0.6252, Class Loss: 0.6252, Train_Acc: 0.6605,  Validate_Acc: 0.5935.
+[2022-07-31 09:57:32,765 main.py:190 INFO]: Epoch [13/100],  Loss: 0.6251, Class Loss: 0.6251, Train_Acc: 0.6578,  Validate_Acc: 0.5962.
+[2022-07-31 09:57:37,492 main.py:190 INFO]: Epoch [14/100],  Loss: 0.6226, Class Loss: 0.6226, Train_Acc: 0.6641,  Validate_Acc: 0.5824.
+[2022-07-31 09:57:42,238 main.py:190 INFO]: Epoch [15/100],  Loss: 0.6236, Class Loss: 0.6236, Train_Acc: 0.6591,  Validate_Acc: 0.5961.
+[2022-07-31 09:57:46,960 main.py:190 INFO]: Epoch [16/100],  Loss: 0.6195, Class Loss: 0.6195, Train_Acc: 0.6716,  Validate_Acc: 0.6040.
+[2022-07-31 09:57:52,772 main.py:190 INFO]: Epoch [17/100],  Loss: 0.6210, Class Loss: 0.6210, Train_Acc: 0.6647,  Validate_Acc: 0.5903.
+[2022-07-31 09:57:57,518 main.py:190 INFO]: Epoch [18/100],  Loss: 0.6162, Class Loss: 0.6162, Train_Acc: 0.6726,  Validate_Acc: 0.6007.
+[2022-07-31 09:58:02,228 main.py:190 INFO]: Epoch [19/100],  Loss: 0.6169, Class Loss: 0.6169, Train_Acc: 0.6726,  Validate_Acc: 0.5936.
+[2022-07-31 09:58:06,961 main.py:190 INFO]: Epoch [20/100],  Loss: 0.6136, Class Loss: 0.6136, Train_Acc: 0.6780,  Validate_Acc: 0.5994.
+[2022-07-31 09:58:11,740 main.py:190 INFO]: Epoch [21/100],  Loss: 0.6115, Class Loss: 0.6115, Train_Acc: 0.6794,  Validate_Acc: 0.5948.
+[2022-07-31 09:58:16,460 main.py:190 INFO]: Epoch [22/100],  Loss: 0.6099, Class Loss: 0.6099, Train_Acc: 0.6766,  Validate_Acc: 0.6124.
+[2022-07-31 09:58:22,235 main.py:190 INFO]: Epoch [23/100],  Loss: 0.6103, Class Loss: 0.6103, Train_Acc: 0.6845,  Validate_Acc: 0.6079.
+[2022-07-31 09:58:27,144 main.py:190 INFO]: Epoch [24/100],  Loss: 0.6088, Class Loss: 0.6088, Train_Acc: 0.6895,  Validate_Acc: 0.6144.
+[2022-07-31 09:58:32,894 main.py:190 INFO]: Epoch [25/100],  Loss: 0.6087, Class Loss: 0.6087, Train_Acc: 0.6874,  Validate_Acc: 0.6085.
+[2022-07-31 09:58:37,630 main.py:190 INFO]: Epoch [26/100],  Loss: 0.6065, Class Loss: 0.6065, Train_Acc: 0.6824,  Validate_Acc: 0.6144.
+[2022-07-31 09:58:42,257 main.py:190 INFO]: Epoch [27/100],  Loss: 0.6041, Class Loss: 0.6041, Train_Acc: 0.6956,  Validate_Acc: 0.6105.
+[2022-07-31 09:58:46,900 main.py:190 INFO]: Epoch [28/100],  Loss: 0.6046, Class Loss: 0.6046, Train_Acc: 0.6883,  Validate_Acc: 0.6092.
+[2022-07-31 09:58:51,542 main.py:190 INFO]: Epoch [29/100],  Loss: 0.6032, Class Loss: 0.6032, Train_Acc: 0.6957,  Validate_Acc: 0.6111.
+[2022-07-31 09:58:56,194 main.py:190 INFO]: Epoch [30/100],  Loss: 0.6049, Class Loss: 0.6049, Train_Acc: 0.6911,  Validate_Acc: 0.6209.
+[2022-07-31 09:59:01,931 main.py:190 INFO]: Epoch [31/100],  Loss: 0.6020, Class Loss: 0.6020, Train_Acc: 0.6986,  Validate_Acc: 0.6066.
+[2022-07-31 09:59:06,570 main.py:190 INFO]: Epoch [32/100],  Loss: 0.6016, Class Loss: 0.6016, Train_Acc: 0.6970,  Validate_Acc: 0.6274.
+[2022-07-31 09:59:12,739 main.py:190 INFO]: Epoch [33/100],  Loss: 0.6012, Class Loss: 0.6012, Train_Acc: 0.6913,  Validate_Acc: 0.6092.
+[2022-07-31 09:59:17,553 main.py:190 INFO]: Epoch [34/100],  Loss: 0.5967, Class Loss: 0.5967, Train_Acc: 0.7019,  Validate_Acc: 0.6241.
+[2022-07-31 09:59:22,233 main.py:190 INFO]: Epoch [35/100],  Loss: 0.5984, Class Loss: 0.5984, Train_Acc: 0.6987,  Validate_Acc: 0.6157.
+[2022-07-31 09:59:26,954 main.py:190 INFO]: Epoch [36/100],  Loss: 0.5933, Class Loss: 0.5933, Train_Acc: 0.7126,  Validate_Acc: 0.6164.
+[2022-07-31 09:59:31,815 main.py:190 INFO]: Epoch [37/100],  Loss: 0.5969, Class Loss: 0.5969, Train_Acc: 0.7012,  Validate_Acc: 0.6235.
+[2022-07-31 09:59:36,578 main.py:190 INFO]: Epoch [38/100],  Loss: 0.5962, Class Loss: 0.5962, Train_Acc: 0.7034,  Validate_Acc: 0.6137.
+[2022-07-31 09:59:41,299 main.py:190 INFO]: Epoch [39/100],  Loss: 0.5947, Class Loss: 0.5947, Train_Acc: 0.7067,  Validate_Acc: 0.6228.
+[2022-07-31 09:59:45,995 main.py:190 INFO]: Epoch [40/100],  Loss: 0.5933, Class Loss: 0.5933, Train_Acc: 0.7091,  Validate_Acc: 0.6164.
+[2022-07-31 09:59:50,816 main.py:190 INFO]: Epoch [41/100],  Loss: 0.5919, Class Loss: 0.5919, Train_Acc: 0.7082,  Validate_Acc: 0.6157.
+[2022-07-31 09:59:55,534 main.py:190 INFO]: Epoch [42/100],  Loss: 0.5919, Class Loss: 0.5919, Train_Acc: 0.7085,  Validate_Acc: 0.6189.
+[2022-07-31 10:00:00,303 main.py:190 INFO]: Epoch [43/100],  Loss: 0.5900, Class Loss: 0.5900, Train_Acc: 0.7131,  Validate_Acc: 0.6307.
+[2022-07-31 10:00:06,999 main.py:190 INFO]: Epoch [44/100],  Loss: 0.5912, Class Loss: 0.5912, Train_Acc: 0.7078,  Validate_Acc: 0.6203.
+[2022-07-31 10:00:11,729 main.py:190 INFO]: Epoch [45/100],  Loss: 0.5903, Class Loss: 0.5903, Train_Acc: 0.7069,  Validate_Acc: 0.6359.
+[2022-07-31 10:00:17,599 main.py:190 INFO]: Epoch [46/100],  Loss: 0.5907, Class Loss: 0.5907, Train_Acc: 0.7058,  Validate_Acc: 0.6229.
+[2022-07-31 10:00:22,281 main.py:190 INFO]: Epoch [47/100],  Loss: 0.5848, Class Loss: 0.5848, Train_Acc: 0.7213,  Validate_Acc: 0.6392.
+[2022-07-31 10:00:28,378 main.py:190 INFO]: Epoch [48/100],  Loss: 0.5854, Class Loss: 0.5854, Train_Acc: 0.7170,  Validate_Acc: 0.6196.
+[2022-07-31 10:00:33,136 main.py:190 INFO]: Epoch [49/100],  Loss: 0.5838, Class Loss: 0.5838, Train_Acc: 0.7238,  Validate_Acc: 0.6170.
+[2022-07-31 10:00:37,833 main.py:190 INFO]: Epoch [50/100],  Loss: 0.5838, Class Loss: 0.5838, Train_Acc: 0.7202,  Validate_Acc: 0.6300.
+[2022-07-31 10:00:42,587 main.py:190 INFO]: Epoch [51/100],  Loss: 0.5876, Class Loss: 0.5876, Train_Acc: 0.7145,  Validate_Acc: 0.6450.
+[2022-07-31 10:00:48,599 main.py:190 INFO]: Epoch [52/100],  Loss: 0.5814, Class Loss: 0.5814, Train_Acc: 0.7228,  Validate_Acc: 0.6300.
+[2022-07-31 10:00:53,303 main.py:190 INFO]: Epoch [53/100],  Loss: 0.5817, Class Loss: 0.5817, Train_Acc: 0.7242,  Validate_Acc: 0.6313.
+[2022-07-31 10:00:58,057 main.py:190 INFO]: Epoch [54/100],  Loss: 0.5818, Class Loss: 0.5818, Train_Acc: 0.7196,  Validate_Acc: 0.6294.
+[2022-07-31 10:01:02,891 main.py:190 INFO]: Epoch [55/100],  Loss: 0.5830, Class Loss: 0.5830, Train_Acc: 0.7215,  Validate_Acc: 0.6189.
+[2022-07-31 10:01:07,585 main.py:190 INFO]: Epoch [56/100],  Loss: 0.5801, Class Loss: 0.5801, Train_Acc: 0.7199,  Validate_Acc: 0.6320.
+[2022-07-31 10:01:12,376 main.py:190 INFO]: Epoch [57/100],  Loss: 0.5824, Class Loss: 0.5824, Train_Acc: 0.7180,  Validate_Acc: 0.6248.
+[2022-07-31 10:01:17,058 main.py:190 INFO]: Epoch [58/100],  Loss: 0.5797, Class Loss: 0.5797, Train_Acc: 0.7242,  Validate_Acc: 0.6248.
+[2022-07-31 10:01:21,751 main.py:190 INFO]: Epoch [59/100],  Loss: 0.5816, Class Loss: 0.5816, Train_Acc: 0.7208,  Validate_Acc: 0.6313.
+[2022-07-31 10:01:26,480 main.py:190 INFO]: Epoch [60/100],  Loss: 0.5773, Class Loss: 0.5773, Train_Acc: 0.7301,  Validate_Acc: 0.6372.
+[2022-07-31 10:01:31,238 main.py:190 INFO]: Epoch [61/100],  Loss: 0.5797, Class Loss: 0.5797, Train_Acc: 0.7247,  Validate_Acc: 0.6339.
+[2022-07-31 10:01:35,957 main.py:190 INFO]: Epoch [62/100],  Loss: 0.5782, Class Loss: 0.5782, Train_Acc: 0.7298,  Validate_Acc: 0.6404.
+[2022-07-31 10:01:40,670 main.py:190 INFO]: Epoch [63/100],  Loss: 0.5740, Class Loss: 0.5740, Train_Acc: 0.7342,  Validate_Acc: 0.6307.
+[2022-07-31 10:01:45,400 main.py:190 INFO]: Epoch [64/100],  Loss: 0.5746, Class Loss: 0.5746, Train_Acc: 0.7320,  Validate_Acc: 0.6294.
+[2022-07-31 10:01:50,165 main.py:190 INFO]: Epoch [65/100],  Loss: 0.5756, Class Loss: 0.5756, Train_Acc: 0.7303,  Validate_Acc: 0.6339.
+[2022-07-31 10:01:54,938 main.py:190 INFO]: Epoch [66/100],  Loss: 0.5732, Class Loss: 0.5732, Train_Acc: 0.7342,  Validate_Acc: 0.6346.
+[2022-07-31 10:01:59,701 main.py:190 INFO]: Epoch [67/100],  Loss: 0.5722, Class Loss: 0.5722, Train_Acc: 0.7322,  Validate_Acc: 0.6313.
+[2022-07-31 10:02:04,452 main.py:190 INFO]: Epoch [68/100],  Loss: 0.5692, Class Loss: 0.5692, Train_Acc: 0.7388,  Validate_Acc: 0.6372.
+[2022-07-31 10:02:09,225 main.py:190 INFO]: Epoch [69/100],  Loss: 0.5697, Class Loss: 0.5697, Train_Acc: 0.7432,  Validate_Acc: 0.6450.
+[2022-07-31 10:02:14,025 main.py:190 INFO]: Epoch [70/100],  Loss: 0.5713, Class Loss: 0.5713, Train_Acc: 0.7319,  Validate_Acc: 0.6405.
+[2022-07-31 10:02:18,803 main.py:190 INFO]: Epoch [71/100],  Loss: 0.5710, Class Loss: 0.5710, Train_Acc: 0.7365,  Validate_Acc: 0.6391.
+[2022-07-31 10:02:23,590 main.py:190 INFO]: Epoch [72/100],  Loss: 0.5685, Class Loss: 0.5685, Train_Acc: 0.7428,  Validate_Acc: 0.6333.
+[2022-07-31 10:02:28,410 main.py:190 INFO]: Epoch [73/100],  Loss: 0.5699, Class Loss: 0.5699, Train_Acc: 0.7348,  Validate_Acc: 0.6300.
+[2022-07-31 10:02:33,336 main.py:190 INFO]: Epoch [74/100],  Loss: 0.5705, Class Loss: 0.5705, Train_Acc: 0.7345,  Validate_Acc: 0.6203.
+[2022-07-31 10:02:38,193 main.py:190 INFO]: Epoch [75/100],  Loss: 0.5674, Class Loss: 0.5674, Train_Acc: 0.7430,  Validate_Acc: 0.6320.
+[2022-07-31 10:02:43,015 main.py:190 INFO]: Epoch [76/100],  Loss: 0.5700, Class Loss: 0.5700, Train_Acc: 0.7359,  Validate_Acc: 0.6339.
+[2022-07-31 10:02:47,822 main.py:190 INFO]: Epoch [77/100],  Loss: 0.5636, Class Loss: 0.5636, Train_Acc: 0.7457,  Validate_Acc: 0.6340.
+[2022-07-31 10:02:52,718 main.py:190 INFO]: Epoch [78/100],  Loss: 0.5666, Class Loss: 0.5666, Train_Acc: 0.7413,  Validate_Acc: 0.6320.
+[2022-07-31 10:02:57,513 main.py:190 INFO]: Epoch [79/100],  Loss: 0.5688, Class Loss: 0.5688, Train_Acc: 0.7391,  Validate_Acc: 0.6313.
+[2022-07-31 10:03:02,384 main.py:190 INFO]: Epoch [80/100],  Loss: 0.5656, Class Loss: 0.5656, Train_Acc: 0.7397,  Validate_Acc: 0.6274.
+[2022-07-31 10:03:07,197 main.py:190 INFO]: Epoch [81/100],  Loss: 0.5637, Class Loss: 0.5637, Train_Acc: 0.7478,  Validate_Acc: 0.6346.
+[2022-07-31 10:03:12,018 main.py:190 INFO]: Epoch [82/100],  Loss: 0.5666, Class Loss: 0.5666, Train_Acc: 0.7397,  Validate_Acc: 0.6398.
+[2022-07-31 10:03:16,875 main.py:190 INFO]: Epoch [83/100],  Loss: 0.5619, Class Loss: 0.5619, Train_Acc: 0.7464,  Validate_Acc: 0.6385.
+[2022-07-31 10:03:21,701 main.py:190 INFO]: Epoch [84/100],  Loss: 0.5644, Class Loss: 0.5644, Train_Acc: 0.7441,  Validate_Acc: 0.6372.
+[2022-07-31 10:03:26,554 main.py:190 INFO]: Epoch [85/100],  Loss: 0.5632, Class Loss: 0.5632, Train_Acc: 0.7494,  Validate_Acc: 0.6424.
+[2022-07-31 10:03:31,357 main.py:190 INFO]: Epoch [86/100],  Loss: 0.5610, Class Loss: 0.5610, Train_Acc: 0.7530,  Validate_Acc: 0.6431.
+[2022-07-31 10:03:36,173 main.py:190 INFO]: Epoch [87/100],  Loss: 0.5608, Class Loss: 0.5608, Train_Acc: 0.7525,  Validate_Acc: 0.6411.
+[2022-07-31 10:03:41,127 main.py:190 INFO]: Epoch [88/100],  Loss: 0.5634, Class Loss: 0.5634, Train_Acc: 0.7446,  Validate_Acc: 0.6411.
+[2022-07-31 10:03:46,000 main.py:190 INFO]: Epoch [89/100],  Loss: 0.5597, Class Loss: 0.5597, Train_Acc: 0.7457,  Validate_Acc: 0.6300.
+[2022-07-31 10:03:50,885 main.py:190 INFO]: Epoch [90/100],  Loss: 0.5588, Class Loss: 0.5588, Train_Acc: 0.7508,  Validate_Acc: 0.6404.
+[2022-07-31 10:03:56,104 main.py:190 INFO]: Epoch [91/100],  Loss: 0.5598, Class Loss: 0.5598, Train_Acc: 0.7558,  Validate_Acc: 0.6333.
+[2022-07-31 10:04:01,129 main.py:190 INFO]: Epoch [92/100],  Loss: 0.5591, Class Loss: 0.5591, Train_Acc: 0.7510,  Validate_Acc: 0.6372.
+[2022-07-31 10:04:06,013 main.py:190 INFO]: Epoch [93/100],  Loss: 0.5589, Class Loss: 0.5589, Train_Acc: 0.7501,  Validate_Acc: 0.6320.
+[2022-07-31 10:04:10,844 main.py:190 INFO]: Epoch [94/100],  Loss: 0.5615, Class Loss: 0.5615, Train_Acc: 0.7434,  Validate_Acc: 0.6320.
+[2022-07-31 10:04:15,702 main.py:190 INFO]: Epoch [95/100],  Loss: 0.5553, Class Loss: 0.5553, Train_Acc: 0.7568,  Validate_Acc: 0.6300.
+[2022-07-31 10:04:20,664 main.py:190 INFO]: Epoch [96/100],  Loss: 0.5569, Class Loss: 0.5569, Train_Acc: 0.7533,  Validate_Acc: 0.6359.
+[2022-07-31 10:04:25,567 main.py:190 INFO]: Epoch [97/100],  Loss: 0.5547, Class Loss: 0.5547, Train_Acc: 0.7589,  Validate_Acc: 0.6274.
+[2022-07-31 10:04:30,443 main.py:190 INFO]: Epoch [98/100],  Loss: 0.5550, Class Loss: 0.5550, Train_Acc: 0.7559,  Validate_Acc: 0.6281.
+[2022-07-31 10:04:35,318 main.py:190 INFO]: Epoch [99/100],  Loss: 0.5552, Class Loss: 0.5552, Train_Acc: 0.7591,  Validate_Acc: 0.6229.
+[2022-07-31 10:04:40,496 main.py:190 INFO]: Epoch [100/100],  Loss: 0.5535, Class Loss: 0.5535, Train_Acc: 0.7608,  Validate_Acc: 0.6300.
+[2022-07-31 10:04:40,497 main.py:201 INFO]: start testing model
+[2022-07-31 10:04:41,801 configuration_utils.py:265 INFO]: loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/hfl/chinese-roberta-wwm-ext/config.json from cache at /home/v-zuangao/.cache/torch/transformers/3227a4c62d38cb0f891e7ccb8fc0b7b7dbd873889b3688c2e95834fb6f6109be.573c56a39f56f50b7bc6e9803d92871c74059419e37e87c5b14d49b1546b0703
+[2022-07-31 10:04:41,802 configuration_utils.py:301 INFO]: Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "directionality": "bidi",
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+[2022-07-31 10:04:41,905 modeling_utils.py:650 INFO]: loading weights file https://cdn.huggingface.co/hfl/chinese-roberta-wwm-ext/pytorch_model.bin from cache at /home/v-zuangao/.cache/torch/transformers/47d2326d47246cef3121d70d592c0391a4ed594b04ce3dea8bd47edd37e20370.6ac27309c356295f0e005c6029fce503ec6a32853911ebf79f8bddd8dd10edad
+[2022-07-31 10:04:45,070 main.py:235 INFO]: Classification Acc: 0.6266, F1: 0.6207, Precision: 0.6301, Recall: 0.6237, AUC-ROC: 0.6642
+[2022-07-31 10:04:45,076 main.py:237 INFO]: Classification report:
+              precision    recall  f1-score   support
+           0       0.65      0.52      0.57       648
+           1       0.61      0.73      0.67       683
+    accuracy                           0.63      1331
+   macro avg       0.63      0.62      0.62      1331
+weighted avg       0.63      0.63      0.62      1331
+[2022-07-31 10:04:45,077 main.py:239 INFO]: Classification confusion matrix:
+[[334 314]
+ [183 500]]

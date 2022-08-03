@@ -1,0 +1,9 @@
+usage: main.py [-h] [--output_dir OUTPUT_DIR] [--datasets DATASETS]
+               [--max_seqlen MAX_SEQLEN] [--seed SEED] [--expType EXPTYPE]
+               [--expCode EXPCODE] [--static STATIC]
+               [--sequence_length SEQUENCE_LENGTH] [--class_num CLASS_NUM]
+               [--hidden_dim HIDDEN_DIM] [--dropout DROPOUT] [--lambd LAMBD]
+               [--text_only TEXT_ONLY] [--d_iter D_ITER]
+               [--batch_size BATCH_SIZE] [--num_epochs NUM_EPOCHS]
+               [--learning_rate LEARNING_RATE]
+main.py: error: unrecognized arguments: ---datasets Twitter

@@ -1,0 +1,94 @@
+2022-07-31 14:54:04,414 INFO    MainThread:3048466 [internal.py:wandb_internal():93] W&B internal server running at pid: 3048466, started at: 2022-07-31 14:54:04.412773
+2022-07-31 14:54:04,419 INFO    WriterThread:3048466 [datastore.py:open_for_write():75] open: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/run-e7qrzhe8.wandb
+2022-07-31 14:54:04,423 DEBUG   SenderThread:3048466 [sender.py:send():236] send: header
+2022-07-31 14:54:04,423 DEBUG   SenderThread:3048466 [sender.py:send():236] send: run
+2022-07-31 14:54:04,573 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: check_version
+2022-07-31 14:54:04,578 INFO    SenderThread:3048466 [dir_watcher.py:__init__():216] watching files in: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files
+2022-07-31 14:54:04,578 INFO    SenderThread:3048466 [sender.py:_start_run_threads():818] run started: e7qrzhe8 with start time 1659279240
+2022-07-31 14:54:04,578 DEBUG   SenderThread:3048466 [sender.py:send():236] send: summary
+2022-07-31 14:54:04,579 INFO    SenderThread:3048466 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-31 14:54:04,579 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: check_version
+2022-07-31 14:54:04,635 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: run_start
+2022-07-31 14:54:04,639 DEBUG   HandlerThread:3048466 [meta.py:__init__():35] meta init
+2022-07-31 14:54:04,639 DEBUG   HandlerThread:3048466 [meta.py:__init__():49] meta init done
+2022-07-31 14:54:04,639 DEBUG   HandlerThread:3048466 [meta.py:probe():209] probe
+2022-07-31 14:54:04,647 DEBUG   HandlerThread:3048466 [meta.py:_setup_git():199] setup git
+2022-07-31 14:54:04,663 DEBUG   HandlerThread:3048466 [meta.py:_setup_git():206] setup git done
+2022-07-31 14:54:04,663 DEBUG   HandlerThread:3048466 [meta.py:_save_pip():53] save pip
+2022-07-31 14:54:04,664 DEBUG   HandlerThread:3048466 [meta.py:_save_pip():67] save pip done
+2022-07-31 14:54:04,664 DEBUG   HandlerThread:3048466 [meta.py:_save_conda():74] save conda
+2022-07-31 14:54:05,583 INFO    Thread-13 :3048466 [dir_watcher.py:_on_file_created():269] file/dir created: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files/requirements.txt
+2022-07-31 14:54:05,583 INFO    Thread-13 :3048466 [dir_watcher.py:_on_file_created():269] file/dir created: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files/wandb-summary.json
+2022-07-31 14:54:05,584 INFO    Thread-13 :3048466 [dir_watcher.py:_on_file_created():269] file/dir created: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files/conda-environment.yaml
+2022-07-31 14:54:05,767 DEBUG   HandlerThread:3048466 [meta.py:_save_conda():84] save conda done
+2022-07-31 14:54:05,767 DEBUG   HandlerThread:3048466 [meta.py:probe():247] probe done
+2022-07-31 14:54:05,775 DEBUG   SenderThread:3048466 [sender.py:send():236] send: files
+2022-07-31 14:54:05,775 INFO    SenderThread:3048466 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-07-31 14:54:05,786 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:54:05,787 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:54:05,879 DEBUG   SenderThread:3048466 [sender.py:send():236] send: telemetry
+2022-07-31 14:54:06,138 INFO    Thread-17 :3048466 [upload_job.py:push():138] Uploaded file /tmp/tmpr474wv56wandb/dm8v3kep-wandb-metadata.json
+2022-07-31 14:54:06,579 INFO    Thread-13 :3048466 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files/conda-environment.yaml
+2022-07-31 14:54:06,579 INFO    Thread-13 :3048466 [dir_watcher.py:_on_file_created():269] file/dir created: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files/output.log
+2022-07-31 14:54:06,580 INFO    Thread-13 :3048466 [dir_watcher.py:_on_file_created():269] file/dir created: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files/wandb-metadata.json
+2022-07-31 14:54:08,580 INFO    Thread-13 :3048466 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files/output.log
+2022-07-31 14:54:20,881 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:54:20,881 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:54:32,921 DEBUG   SenderThread:3048466 [sender.py:send():236] send: stats
+2022-07-31 14:54:35,588 INFO    Thread-13 :3048466 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files/config.yaml
+2022-07-31 14:54:35,978 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:54:35,978 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:54:51,180 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:54:51,180 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:55:03,205 DEBUG   SenderThread:3048466 [sender.py:send():236] send: stats
+2022-07-31 14:55:06,274 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:55:06,275 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:55:21,863 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:55:21,864 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:55:33,470 DEBUG   SenderThread:3048466 [sender.py:send():236] send: stats
+2022-07-31 14:55:36,957 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:55:36,958 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:55:52,055 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:55:52,055 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:56:03,728 DEBUG   SenderThread:3048466 [sender.py:send():236] send: stats
+2022-07-31 14:56:07,155 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:56:07,155 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:56:16,622 INFO    Thread-13 :3048466 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files/output.log
+2022-07-31 14:56:18,623 INFO    Thread-13 :3048466 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files/output.log
+2022-07-31 14:56:22,259 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:56:22,259 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:56:33,987 DEBUG   SenderThread:3048466 [sender.py:send():236] send: stats
+2022-07-31 14:56:37,378 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:56:37,379 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:56:52,466 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:56:52,467 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:57:04,234 DEBUG   SenderThread:3048466 [sender.py:send():236] send: stats
+2022-07-31 14:57:07,558 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:57:07,558 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:57:22,658 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:57:22,658 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:57:34,478 DEBUG   SenderThread:3048466 [sender.py:send():236] send: stats
+2022-07-31 14:57:37,747 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:57:37,747 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:57:52,844 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:57:52,845 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:58:04,734 DEBUG   SenderThread:3048466 [sender.py:send():236] send: stats
+2022-07-31 14:58:07,939 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:58:07,939 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:58:23,033 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:58:23,034 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:58:34,979 DEBUG   SenderThread:3048466 [sender.py:send():236] send: stats
+2022-07-31 14:58:38,125 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:58:38,125 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:58:53,415 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:58:53,416 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:59:05,231 DEBUG   SenderThread:3048466 [sender.py:send():236] send: stats
+2022-07-31 14:59:06,684 INFO    Thread-13 :3048466 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files/output.log
+2022-07-31 14:59:08,516 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:59:08,516 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:59:08,685 INFO    Thread-13 :3048466 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/v-zuangao/MM-FakeNews/EANN-KDD18/src_trainer/wandb/run-20220731_145400-e7qrzhe8/files/output.log
+2022-07-31 14:59:23,609 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:59:23,609 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
+2022-07-31 14:59:35,474 DEBUG   SenderThread:3048466 [sender.py:send():236] send: stats
+2022-07-31 14:59:38,700 DEBUG   HandlerThread:3048466 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-31 14:59:38,701 DEBUG   SenderThread:3048466 [sender.py:send_request():250] send_request: stop_status
