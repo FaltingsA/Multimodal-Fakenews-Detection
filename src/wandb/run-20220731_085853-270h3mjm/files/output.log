@@ -1,6 +1,0 @@
-[2022-07-31 08:58:58,461 main.py:68 INFO]: loading data
-[2022-07-31 08:58:59,150 tokenization_utils.py:1022 INFO]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-base-vocab.json from cache at /home/v-zuangao/.cache/torch/transformers/d0c5776499adc1ded22493fae699da0971c1ee4c2587111707a4d177d20257a2.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
-[2022-07-31 08:58:59,150 tokenization_utils.py:1022 INFO]: loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-base-merges.txt from cache at /home/v-zuangao/.cache/torch/transformers/b35e7cd126cd4229a746b5d5c29a749e8e84438b14bcdb575950584fe33207e8.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
-TEXT: 14129, Image: 14129, label: 14129, Mask: 14129
-TEXT: 1380, Image: 1380, label: 1380, Mask: 1380
-[2022-07-31 08:59:24,424 main.py:75 INFO]: Train data_length => TEXT: 14129, Image: 14129, label: 14129, Mask: 14129
